@@ -1,0 +1,781 @@
+import discord
+from discord.ext import commands
+from discord import app_commands
+import random
+import json
+import os
+from PIL import Image, ImageDraw, ImageFont
+import io
+from datetime import datetime, timedelta
+from typing import Optional
+import asyncio
+
+with open("pokedex.json", "r", encoding="utf-8") as f:
+    POKEMON_DATA = json.load(f)
+
+# Load Pokémon data
+with open("common.json", "r") as f:
+    COMMON_POKEMON = json.load(f)
+
+with open("uncommon.json", "r") as f:
+    UNCOMMON_POKEMON = json.load(f)
+
+with open("rare.json", "r") as f:
+    RARE_POKEMON = json.load(f)
+
+RARITY_CHANCES = {
+    "common": 70,
+    "uncommon": 20,
+    "rare": 10
+}
+
+def get_random_pokemon_id():
+    roll = random.randint(1, 100)
+    if roll <= RARITY_CHANCES["rare"]:
+        return random.choice(RARE_POKEMON), "rare"
+    elif roll <= RARITY_CHANCES["rare"] + RARITY_CHANCES["uncommon"]:
+        return random.choice(UNCOMMON_POKEMON), "uncommon"
+    else:
+        return random.choice(COMMON_POKEMON), "common"
+
+
+
+class SpawnSystem(commands.Cog):
+    def __init__(self, bot, spawn_collection, pokemon_collection):
+        self.bot = bot
+        self.collection = spawn_collection               # serverspawns
+        self.pokemon_collection = pokemon_collection   # MongoDB collection (e.g. serverspawns
+        self.server_message_count = {}     # Track messages per server
+        self.last_message_time = {}        # Anti-spam: last message time per user
+        self.spawn_channels = {}           # All valid channels per guild
+        self.redirect_channels = {}        # Manually set redirect channels
+        self.active_spawns = {}            # Active spawn state per channel
+        self.catch_locks = {}              # Prevent concurrent catches
+        self.spawn_index = {}              # For round-robin spawn distribution
+        self.messages_until_spawn = 10 
+        self.altname_map = {}
+        try:
+           with open("pokemon_altnames.json", "r", encoding="utf-8") as f:
+                alt_list = json.load(f)
+                for entry in alt_list:
+                    canonical = entry["name"].lower()
+                    for value in entry.values():
+                        if isinstance(value, str):
+                            self.altname_map[value.lower()] = canonical
+        except Exception as e:
+            print(f"Failed to load alternative names: {e}")
+
+    
+
+    @commands.Cog.listener()
+    async def on_message(self, message):
+        """Handle message counting with anti-spam for spawn triggers"""
+        if message.author.bot or not message.guild:
+            return
+
+        user_id = message.author.id
+        current_time = datetime.utcnow()
+
+        # Anti-spam: 1.5 sec cooldown per user
+        if user_id in self.last_message_time:
+            time_diff = current_time - self.last_message_time[user_id]
+            if time_diff < timedelta(seconds=1.5):
+                return
+
+        self.last_message_time[user_id] = current_time
+
+        server_id = message.guild.id
+
+        # Add channel to spawnable channels (if valid)
+        if isinstance(message.channel, discord.TextChannel):
+            permissions = message.channel.permissions_for(message.guild.me)
+            if permissions.send_messages and permissions.attach_files:
+                if server_id not in self.spawn_channels:
+                    self.spawn_channels[server_id] = set()
+                self.spawn_channels[server_id].add(message.channel.id)
+
+        # Initialize or increment message count
+        if server_id not in self.server_message_count:
+            self.server_message_count[server_id] = 0
+
+        self.server_message_count[server_id] += 1
+
+        # Check spawn trigger
+        if self.server_message_count[server_id] >= self.messages_until_spawn:
+            self.server_message_count[server_id] = 0
+            self.cleanup_old_spawns()
+
+            # Get list of redirect channels from database if set
+            redirect_doc = await self.collection.find_one({"guild_id": server_id})
+            redirect_channels = redirect_doc.get("redirect_channels", []) if redirect_doc else []
+
+            available_channels = []
+            if redirect_channels:
+                print(f"🎯 Using redirect channels for server {server_id}: {redirect_channels}")
+                for channel_id in redirect_channels:
+                    channel = self.bot.get_channel(channel_id)
+                    if channel and channel.id not in self.active_spawns:
+                        perms = channel.permissions_for(channel.guild.me)
+                        if perms.send_messages and perms.attach_files:
+                            available_channels.append(channel)
+                        else:
+                            print(f"❌ No permissions in redirect channel: {channel.name}")
+            else:
+                print(f"🌐 No redirect channels, using default channels for {server_id}")
+                if server_id in self.spawn_channels:
+                    for channel_id in self.spawn_channels[server_id]:
+                        channel = self.bot.get_channel(channel_id)
+                        if channel and channel.id not in self.active_spawns:
+                            perms = channel.permissions_for(channel.guild.me)
+                            if perms.send_messages and perms.attach_files:
+                                available_channels.append(channel)
+
+            print(f"📊 Available spawn channels: {len(available_channels)}")
+            if available_channels:
+                # Round-robin: Distribute spawns evenly
+                if server_id not in self.spawn_index:
+                    self.spawn_index[server_id] = 0
+
+                index = self.spawn_index[server_id] % len(available_channels)
+                spawn_channel = available_channels[index]
+                self.spawn_index[server_id] += 1
+
+                await self.spawn_pokemon(spawn_channel)
+            else:
+                print(f"❌ No available channels to spawn in for server {server_id}")
+
+    async def spawn_pokemon(self, channel):
+        """Spawn a random wild Pokémon"""
+        try:
+            # Clear any existing spawn in this channel first
+            if channel.id in self.active_spawns:
+                print(f"🧹 Clearing old spawn in {channel.name}")
+                del self.active_spawns[channel.id]
+            
+            # Get random Pokémon from the data
+            #pokemon_ids = list(POKEMON_DATA.keys())
+            #random_id = get_random_pokemon_id()
+            #pokemon_data = POKEMON_DATA[random_id]
+            pokemon_id, rarity = get_random_pokemon_id()
+
+
+            global POKEMON_DATA
+            pokemon_data = POKEMON_DATA[str(pokemon_id)]
+             
+            
+            # Create spawn image
+            spawn_image = await self.create_spawn_image(pokemon_data)
+            
+            if spawn_image:
+                # Create embed
+                # Get prefix from bot's config
+                prefix = self.bot.command_prefix
+                embed = discord.Embed(
+                    title="🌿 A wild pokémon has appeared!",
+                    description=f"Guess the pokémon and type `@Botachu#1166 catch <pokémon>` or use `/catch <pokémon>` to catch it!",
+                    color=discord.Color.green()
+                )
+                
+                # Send spawn message
+                file = discord.File(spawn_image, filename="spawn.png")
+                embed.set_image(url="attachment://spawn.png")
+                
+                spawn_msg = await channel.send(embed=embed, file=file)
+                
+                # Track this spawn
+                self.active_spawns[channel.id] = {
+                    "pokemon_name": pokemon_data["name"],
+                    #"pokemon_id": random_id,
+                    "pokemon_id": pokemon_id,
+                    "pokemon_data": pokemon_data,
+                    "message_id": spawn_msg.id,
+                    "timestamp": datetime.utcnow()
+                }
+                
+                print(f"✨ Spawned {pokemon_data['name']} in {channel.name}")
+            
+        except Exception as e:
+            print(f"Error spawning Pokémon: {e}")
+
+    async def create_spawn_image(self, pokemon_data):
+        """Create the spawn image by combining background and Pokémon sprite"""
+        try:
+            # Paths
+            background_path = "spawn.png"
+            pokemon_sprite_path = f"full/{pokemon_data['id']}.png"
+            
+            # Check if files exist
+            if not os.path.exists(background_path):
+                print(f"Background image not found: {background_path}")
+                return None
+                
+            if not os.path.exists(pokemon_sprite_path):
+                print(f"Pokémon sprite not found: {pokemon_sprite_path}")
+                return None
+            
+            # Open images
+            background = Image.open(background_path).convert("RGBA")
+            pokemon_sprite = Image.open(pokemon_sprite_path).convert("RGBA")
+            
+            # Resize sprite if needed (make it fit nicely on the background)
+            sprite_max_size = (400, 400)  # Made bigger for better visibility
+            pokemon_sprite.thumbnail(sprite_max_size, Image.Resampling.LANCZOS)
+            
+            # Calculate position to center the sprite on the background
+            bg_width, bg_height = background.size
+            sprite_width, sprite_height = pokemon_sprite.size
+            
+            # Position sprite in center of background
+            x = (bg_width - sprite_width) // 2
+            y = (bg_height - sprite_height) // 2
+            
+            # Paste sprite onto background
+            background.paste(pokemon_sprite, (x, y), pokemon_sprite)
+            
+            # Save to bytes
+            img_byte_arr = io.BytesIO()
+            background.save(img_byte_arr, format='PNG')
+            img_byte_arr.seek(0)
+            
+            return img_byte_arr
+            
+        except Exception as e:
+            print(f"Error creating spawn image: {e}")
+            return None
+
+    @commands.Cog.listener()
+    async def on_message_edit(self, before, after):
+        """Handle catch attempts"""
+        await self.handle_catch_attempt(after)
+
+    @commands.Cog.listener() 
+    async def on_message_delete(self, message):
+        """Clean up spawn data if spawn message is deleted"""
+        channel_id = message.channel.id
+        if channel_id in self.active_spawns:
+            if self.active_spawns[channel_id]["message_id"] == message.id:
+                del self.active_spawns[channel_id]
+
+    async def handle_catch_attempt(self, message):
+        """Handle when someone tries to catch a Pokémon"""
+        if message.author.bot:
+            return
+            
+        channel_id = message.channel.id
+        
+        # Check if there's an active spawn in this channel
+        if channel_id not in self.active_spawns:
+            return
+        
+        # Check if someone is already trying to catch in this channel
+        if channel_id in self.catch_locks:
+            return  
+            
+        content = message.content.lower().strip()
+        
+        
+        bot_mention = f"<@{self.bot.user.id}>"
+        if not (content.startswith(bot_mention) or content.startswith(f"@pokétwo")):
+            return
+            
+        if "catch " not in content:
+            return
+
+        try:
+            guess = content.split("catch ", 1)[1].strip().lower().replace("-", " ")
+
+            spawn_data = self.active_spawns[channel_id]
+            correct_name = spawn_data["pokemon_name"].lower().replace("-", " ")
+            guess_canonical = self.altname_map.get(guess, guess)
+            correct_canonical = self.altname_map.get(correct_name, correct_name)
+
+            if guess_canonical == correct_canonical:
+                self.catch_locks[channel_id] = message.author.id
+                await self.successful_catch(message, spawn_data)
+            else:
+                pass  # incorrect guess
+                
+        except Exception as e:
+            print(f"Error handling catch attempt: {e}")
+            
+            if channel_id in self.catch_locks:
+                del self.catch_locks[channel_id]
+
+    async def successful_catch(self, message, spawn_data):
+        """Handle successful Pokémon catch"""
+        try:
+            user_id = message.author.id
+            pokemon_data = spawn_data["pokemon_data"]
+            pokemon_id = str(spawn_data["pokemon_id"])
+            original_name = pokemon_data["name"]
+            normalized_name = original_name.lower().replace("-", " ")
+            display_name = original_name.replace("-", " ")
+
+            # Get the highest pokemon_number used by this user
+            last_pokemon = await self.pokemon_collection.find_one(
+                {"user_id": user_id},
+                sort=[("pokemon_number", -1)]
+            )
+            number = last_pokemon["pokemon_number"] + 1 if last_pokemon else 1
+
+            level = random.randint(1, 50)
+            with open("nature.json", "r", encoding="utf-8") as f:
+                natures = json.load(f)["natures"]
+            nature = random.choice(list(natures.keys()))
+
+            ivs = {k: random.randint(0, 31) for k in ["hp_iv", "atk_iv", "def_iv", "sp_atk_iv", "sp_def_iv", "spd_iv"]}
+            evs = {f"ev_{k}": 0 for k in ["hp", "attack", "defense", "sp_attack", "sp_defense", "speed"]}
+            shiny = random.randint(1, 4096) == 1
+
+            moves = [m['name'].replace("-", " ").title() for m in pokemon_data['moves']
+                    if m['learn_method'] == "level-up" and m['level_learned'] <= level]
+            random.shuffle(moves)
+            moves = (moves + ["Tackle"] * 4)[:4]
+
+            data = {
+                "username": message.author.name,
+                "user_id": user_id,
+                "pokemon_number": number,
+                "pokemon_name": original_name,
+                "pokemon_id": pokemon_id,
+                "level": level,
+                "xp": 0,
+                "shiny": shiny,
+                "selected": number == 1,
+                "favorite": False,
+                "nickname": None,
+                "nature": nature,
+                "held_item": None,
+                "xp_blocker": False,
+                "channel": message.channel.id,
+                "server": message.guild.id if message.guild else None,
+                "timestamp": datetime.utcnow(),
+                "move1": moves[0], "move2": moves[1], "move3": moves[2], "move4": moves[3],
+                **ivs, **evs
+            }
+
+            # Save to DB
+            await self.pokemon_collection.insert_one(data)
+            print(f"✅ Saved Pokémon for user {user_id}")
+
+            # Calculate IV percentage
+            total_iv = sum(ivs.values())
+            iv_percentage = round((total_iv / 186) * 100, 2)
+
+            success_message = f"🎉 {message.author.mention}, you caught a Level {level} **{display_name}** ({iv_percentage}%)!"
+            if shiny:
+                success_message += " ✨"
+
+            # === Coin Rewards ===
+            reward_messages = []
+            profile_collection = self.bot.db["user_profiles"]
+            
+            # Base reward for every catch
+            total_coins = 25
+            reward_messages.append("💰 Pokemon caught! +25 coins")
+
+            # Check if this species has ever been caught by this user
+            is_new_species = not await self.pokemon_collection.find_one({
+                "user_id": user_id,
+                "pokemon_name": original_name
+            })
+
+            if is_new_species:
+                total_coins += 35
+                reward_messages.append("📘 First time catch! Added to Pokédex. +35 coins")
+
+            # Count total times caught (after inserting this one)
+            total_species_caught = await self.pokemon_collection.count_documents({
+                "user_id": user_id,
+                "pokemon_name": original_name
+            })
+
+            milestones = {
+                10: 350,
+                50: 1000,
+                100: 2000
+            }
+
+            if total_species_caught in milestones:
+                milestone_reward = milestones[total_species_caught]
+                total_coins += milestone_reward
+                reward_messages.append(f"🏆 You've caught **{display_name}** {total_species_caught} times! +{milestone_reward} coins")
+
+            # Always update coins since every catch gives rewards
+            try:
+                print(f"🪙 DEBUG: Updating {total_coins} coins for user {user_id}")
+                await profile_collection.update_one(
+                    {"user_id": user_id},
+                    {"$inc": {"coins": total_coins}},
+                    upsert=True
+                )
+                print(f"✅ DEBUG: Successfully updated coins for user {user_id}")
+            except Exception as coin_error:
+                print(f"❌ DEBUG: Error updating coins: {coin_error}")
+                # Still continue with the rest of the function
+
+            if reward_messages:
+                success_message += "\n\n" + "\n".join(reward_messages)
+
+            await message.channel.send(success_message)
+
+            # Update quest progress for catch
+            try:
+                quest_cog = self.bot.get_cog("QuestSystem")
+                if quest_cog:
+                    await quest_cog.on_pokemon_catch(user_id, data)
+            except Exception as e:
+                print(f"Error updating quest progress: {e}")
+
+            # Cleanup
+            del self.active_spawns[message.channel.id]
+            self.catch_locks.pop(message.channel.id, None)
+
+        except Exception as e:
+            print(f"Error in successful catch: {e}")
+            self.catch_locks.pop(message.channel.id, None)
+
+
+
+    @commands.command(name="spawn")
+    @commands.has_permissions(administrator=True)
+    async def force_spawn(self, ctx):
+        """Force spawn a Pokémon (admin only)"""
+        await self.spawn_pokemon(ctx.channel)
+        await ctx.message.delete()  # Delete the command message
+
+    @app_commands.command(name="catch", description="Catch a wild Pokémon!")
+    @app_commands.describe(pokemon="The name of the Pokémon to catch")
+    async def slash_catch(self, interaction: discord.Interaction, pokemon: str):
+        """Catch a wild Pokémon using slash command"""
+        channel_id = interaction.channel.id
+
+        if channel_id not in self.active_spawns:
+            return await interaction.response.send_message("❌ There are no wild Pokémon in this channel!", ephemeral=True)
+
+        if channel_id in self.catch_locks:
+            return await interaction.response.send_message("❌ Someone else is already trying to catch this Pokémon!", ephemeral=True)
+
+        try:
+            guess = pokemon.strip().lower().replace("-", " ")
+
+            spawn_data = self.active_spawns[channel_id]
+            correct_name = spawn_data["pokemon_name"].lower().replace("-", " ")
+
+            # Canonicalize both guess and correct using altname map
+            guess_canonical = self.altname_map.get(guess, guess)
+            correct_canonical = self.altname_map.get(correct_name, correct_name)
+
+            if guess_canonical == correct_canonical:
+                self.catch_locks[channel_id] = interaction.user.id
+
+                class MockMessage:
+                    def __init__(self, user, channel, guild):
+                        self.author = user
+                        self.channel = channel
+                        self.guild = guild
+
+                mock_message = MockMessage(interaction.user, interaction.channel, interaction.guild)
+                await self.successful_catch(mock_message, spawn_data)
+                await interaction.response.send_message("🎉 Processing your catch...", ephemeral=True)
+            else:
+                await interaction.response.send_message("❌ That's not the right Pokémon!", ephemeral=True)
+
+        except Exception as e:
+            print(f"Error in slash_catch: {e}")
+            await interaction.response.send_message("⚠️ An error occurred while trying to catch the Pokémon.", ephemeral=True)
+
+
+    @commands.command(name="catch", aliases=["c"])
+    async def prefix_catch(self, ctx, *, pokemon: str):
+        """Catch a wild Pokémon using prefix command"""
+        channel_id = ctx.channel.id
+
+        if channel_id not in self.active_spawns:
+            return await ctx.send("❌ There are no wild Pokémon in this channel!")
+
+        if channel_id in self.catch_locks:
+            return await ctx.send("❌ Someone else is already trying to catch this Pokémon!")
+
+        try:
+            guess = pokemon.strip().lower().replace("-", " ")
+            spawn_data = self.active_spawns[channel_id]
+            correct_name = spawn_data["pokemon_name"].lower().replace("-", " ")
+            guess_canonical = self.altname_map.get(guess, guess)
+            correct_canonical = self.altname_map.get(correct_name, correct_name)
+
+            if guess_canonical == correct_canonical:
+                self.catch_locks[channel_id] = ctx.author.id
+                await self.successful_catch(ctx.message, spawn_data)
+            else:
+                await ctx.send(f"❌ That's not the right Pokémon! The correct answer was **{spawn_data['pokemon_name']}**.")
+
+        except Exception as e:
+            print(f"Error in prefix_catch: {e}")
+            await ctx.send("⚠️ Something went wrong while trying to catch the Pokémon.")
+
+    
+
+    @app_commands.command(name="sai", description="Add a channel where Pokémon can spawn.")
+    @app_commands.describe(channel="Channel to redirect spawns to")
+    @app_commands.checks.has_permissions(manage_guild=True)
+    async def add_redirect(self, interaction: discord.Interaction, channel: discord.TextChannel):
+        guild_id = interaction.guild.id
+
+        await self.collection.update_one(
+            {"guild_id": guild_id},
+            {"$addToSet": {"redirect_channels": channel.id}},
+            upsert=True
+        )
+
+        embed = discord.Embed(
+            title="✅ Channel Added",
+            description=f"{channel.mention} has been added to the spawn redirect list.",
+            color=discord.Color.green()
+        )
+        await interaction.response.send_message(embed=embed)
+
+    @add_redirect.error
+    async def on_add_error(self, interaction: discord.Interaction, error):
+        if isinstance(error, app_commands.MissingPermissions):
+            await interaction.response.send_message("❌ You need **Manage Server** permission to use this command.", ephemeral=True)
+        else:
+            await interaction.response.send_message("❌ Something went wrong.", ephemeral=True)
+
+    @app_commands.command(name="redirect", description="Set spawn channels for this server (admin only)")
+    @app_commands.describe(
+        action="Add or remove channels from spawn list",
+        channel="The channel to add/remove (leave empty to view current channels)"
+    )
+    @app_commands.choices(action=[
+        app_commands.Choice(name="add", value="add"),
+        app_commands.Choice(name="remove", value="remove"),
+        app_commands.Choice(name="list", value="list"),
+        app_commands.Choice(name="clear", value="clear")
+    ])
+    @app_commands.default_permissions(administrator=True)
+    async def redirect(self, interaction: discord.Interaction, action: str, channel: discord.TextChannel = None):
+        """Manage spawn redirect channels for the server"""
+        
+        if action == "list":
+            # Show current redirect channels
+            server_id = interaction.guild.id
+            if server_id in self.redirect_channels and self.redirect_channels[server_id]:
+                channel_mentions = []
+                for channel_id in self.redirect_channels[server_id]:
+                    channel_obj = self.bot.get_channel(channel_id)
+                    if channel_obj:
+                        channel_mentions.append(channel_obj.mention)
+                
+                if channel_mentions:
+                    embed = discord.Embed(
+                        title="🎯 Current Spawn Channels",
+                        description=f"Pokémon will spawn in these channels:\n{chr(10).join(channel_mentions)}",
+                        color=discord.Color.blue()
+                    )
+                else:
+                    embed = discord.Embed(
+                        title="🎯 Current Spawn Channels",
+                        description="No valid redirect channels found.",
+                        color=discord.Color.orange()
+                    )
+            else:
+                embed = discord.Embed(
+                    title="🎯 Current Spawn Channels",
+                    description="No redirect channels set. Pokémon can spawn in any channel.",
+                    color=discord.Color.green()
+                )
+            
+            await interaction.response.send_message(embed=embed)
+            return
+        
+        if action == "clear":
+            # Clear all redirect channels
+            server_id = interaction.guild.id
+            if server_id in self.redirect_channels:
+                del self.redirect_channels[server_id]
+            
+            embed = discord.Embed(
+                title="✅ Spawn Channels Cleared",
+                description="Pokémon can now spawn in any channel again.",
+                color=discord.Color.green()
+            )
+            await interaction.response.send_message(embed=embed)
+            return
+        
+        if not channel:
+            await interaction.response.send_message("❌ Please provide a channel for add/remove actions!", ephemeral=True)
+            return
+        
+        server_id = interaction.guild.id
+        
+        if action == "add":
+            # Add channel to redirect list
+            if server_id not in self.redirect_channels:
+                self.redirect_channels[server_id] = set()
+            
+            # Check if bot has permissions in the channel
+            permissions = channel.permissions_for(interaction.guild.me)
+            if not (permissions.send_messages and permissions.attach_files):
+                await interaction.response.send_message(f"❌ I don't have permissions to send messages and files in {channel.mention}!", ephemeral=True)
+                return
+            
+            if channel.id in self.redirect_channels[server_id]:
+                await interaction.response.send_message(f"❌ {channel.mention} is already in the spawn channel list!", ephemeral=True)
+                return
+            
+            self.redirect_channels[server_id].add(channel.id)
+            embed = discord.Embed(
+                title="✅ Spawn Channel Added",
+                description=f"Added {channel.mention} to the spawn channel list.\nPokémon will now spawn in designated channels only.",
+                color=discord.Color.green()
+            )
+            await interaction.response.send_message(embed=embed)
+        
+        elif action == "remove":
+            # Remove channel from redirect list
+            if server_id not in self.redirect_channels or channel.id not in self.redirect_channels[server_id]:
+                await interaction.response.send_message(f"❌ {channel.mention} is not in the spawn channel list!", ephemeral=True)
+                return
+            
+            self.redirect_channels[server_id].discard(channel.id)
+            
+            # If no channels left, remove the server entry
+            if not self.redirect_channels[server_id]:
+                del self.redirect_channels[server_id]
+            
+            embed = discord.Embed(
+                title="✅ Spawn Channel Removed",
+                description=f"Removed {channel.mention} from the spawn channel list.",
+                color=discord.Color.green()
+            )
+            await interaction.response.send_message(embed=embed)
+
+    @commands.command(name="redirect")
+    @commands.has_permissions(administrator=True)
+    async def prefix_redirect(self, ctx, action=None, channel: discord.TextChannel = None):
+        """Manage spawn redirect channels for the server"""
+        
+        if not action:
+            prefix = ctx.bot.get_primary_prefix()
+            await ctx.send(f"❌ Please specify an action: `add`, `remove`, `list`, or `clear`\nExample: `{prefix}redirect add #channel`")
+            return
+        
+        action = action.lower()
+        
+        if action == "list":
+            # Show current redirect channels
+            server_id = ctx.guild.id
+            if server_id in self.redirect_channels and self.redirect_channels[server_id]:
+                channel_mentions = []
+                for channel_id in self.redirect_channels[server_id]:
+                    channel_obj = self.bot.get_channel(channel_id)
+                    if channel_obj:
+                        channel_mentions.append(channel_obj.mention)
+                
+                if channel_mentions:
+                    embed = discord.Embed(
+                        title="🎯 Current Spawn Channels",
+                        description=f"Pokémon will spawn in these channels:\n{chr(10).join(channel_mentions)}",
+                        color=discord.Color.blue()
+                    )
+                else:
+                    embed = discord.Embed(
+                        title="🎯 Current Spawn Channels",
+                        description="No valid redirect channels found.",
+                        color=discord.Color.orange()
+                    )
+            else:
+                embed = discord.Embed(
+                    title="🎯 Current Spawn Channels",
+                    description="No redirect channels set. Pokémon can spawn in any channel.",
+                    color=discord.Color.green()
+                )
+            
+            await ctx.send(embed=embed)
+            return
+        
+        if action == "clear":
+            # Clear all redirect channels
+            server_id = ctx.guild.id
+            if server_id in self.redirect_channels:
+                del self.redirect_channels[server_id]
+            
+            embed = discord.Embed(
+                title="✅ Spawn Channels Cleared",
+                description="Pokémon can now spawn in any channel again.",
+                color=discord.Color.green()
+            )
+            await ctx.send(embed=embed)
+            return
+        
+        if not channel:
+            prefix = ctx.bot.get_primary_prefix()
+            await ctx.send(f"❌ Please provide a channel for add/remove actions!\nExample: `{prefix}redirect add #channel`")
+            return
+        
+        server_id = ctx.guild.id
+        
+        if action == "add":
+            # Add channel to redirect list
+            if server_id not in self.redirect_channels:
+                self.redirect_channels[server_id] = set()
+            
+            # Check if bot has permissions in the channel
+            permissions = channel.permissions_for(ctx.guild.me)
+            if not (permissions.send_messages and permissions.attach_files):
+                await ctx.send(f"❌ I don't have permissions to send messages and files in {channel.mention}!")
+                return
+            
+            if channel.id in self.redirect_channels[server_id]:
+                await ctx.send(f"❌ {channel.mention} is already in the spawn channel list!")
+                return
+            
+            self.redirect_channels[server_id].add(channel.id)
+            embed = discord.Embed(
+                title="✅ Spawn Channel Added",
+                description=f"Added {channel.mention} to the spawn channel list.\nPokémon will now spawn in designated channels only.",
+                color=discord.Color.green()
+            )
+            await ctx.send(embed=embed)
+        
+        elif action == "remove":
+            # Remove channel from redirect list
+            if server_id not in self.redirect_channels or channel.id not in self.redirect_channels[server_id]:
+                await ctx.send(f"❌ {channel.mention} is not in the spawn channel list!")
+                return
+            
+            self.redirect_channels[server_id].discard(channel.id)
+            
+            # If no channels left, remove the server entry
+            if not self.redirect_channels[server_id]:
+                del self.redirect_channels[server_id]
+            
+            embed = discord.Embed(
+                title="✅ Spawn Channel Removed",
+                description=f"Removed {channel.mention} from the spawn channel list.",
+                color=discord.Color.green()
+            )
+            await ctx.send(embed=embed)
+        
+        else:
+            await ctx.send("❌ Invalid action! Use: `add`, `remove`, `list`, or `clear`")
+
+    def cleanup_old_spawns(self):
+        """Remove spawns older than 30 minutes"""
+        current_time = datetime.utcnow()
+        expired_channels = []
+        
+        for channel_id, spawn_data in self.active_spawns.items():
+            spawn_time = spawn_data.get("timestamp", current_time)
+            if (current_time - spawn_time).total_seconds() > 1800:  # 30 minutes
+                expired_channels.append(channel_id)
+        
+        for channel_id in expired_channels:
+            print(f"🧹 Cleaned up expired spawn in channel {channel_id}")
+            del self.active_spawns[channel_id]
+
+async def setup(bot):
+    server_db = bot.spawn_collection
+    pokemon_collection = bot.db["pokemon_data"]
+    await bot.add_cog(SpawnSystem(bot, server_db, pokemon_collection)) 
