@@ -1,0 +1,3751 @@
+﻿{
+  "gauntlet": {
+    "floors": {
+      "1": {
+        "floor_number": 1,
+        "shard_type": "infernal",
+        "is_boss": false,
+        "enemy_team": [
+          {
+            "pokemon_id": 4,
+            "name": "Charmander",
+            "level": 25,
+            "moves": ["Ember", "Scratch", "Growl", "Leer"]
+          },
+          {
+            "pokemon_id": 58,
+            "name": "Growlithe", 
+            "level": 26,
+            "moves": ["Ember", "Bite", "Roar", "Leer"]
+          },
+          {
+            "pokemon_id": 77,
+            "name": "Ponyta",
+            "level": 24,
+            "moves": ["Ember", "Quick Attack", "Tail Whip", "Stomp"]
+          }
+        ]
+      },
+      "2": {
+        "floor_number": 2,
+        "shard_type": "infernal", 
+        "is_boss": false,
+        "enemy_team": [
+          {
+            "pokemon_id": 37,
+            "name": "Vulpix",
+            "level": 27,
+            "moves": ["Ember", "Quick Attack", "Confuse Ray", "Fire Spin"]
+          },
+          {
+            "pokemon_id": 126,
+            "name": "Magmar",
+            "level": 28,
+            "moves": ["Ember", "Leer", "Smog", "Fire Punch"]
+          },
+          {
+            "pokemon_id": 155,
+            "name": "Cyndaquil",
+            "level": 26,
+            "moves": ["Tackle", "Leer", "Smokescreen", "Ember"]
+          }
+        ]
+      },
+      "3": {
+        "floor_number": 3,
+        "shard_type": "infernal",
+        "is_boss": false,
+          "enemy_team": [
+            {
+              "pokemon_id": 37,
+              "name": "Vulpix",
+              "level": 28,
+              "moves": ["Ember", "Quick Attack", "Confuse Ray", "Fire Spin"]
+            },
+            {
+              "pokemon_id": 126,
+              "name": "Magmar",
+              "level": 29,
+              "moves": ["Ember", "Leer", "Smog", "Fire Punch"]
+            },
+            {
+              "pokemon_id": 155,
+              "name": "Cyndaquil",
+              "level": 27,
+              "moves": ["Tackle", "Leer", "Smokescreen", "Ember"]
+            }
+          ]
+        },
+        "4": {
+          "floor_number": 4,
+          "shard_type": "infernal",
+          "is_boss": false,
+          "enemy_team": [
+            {
+              "pokemon_id": 37,
+              "name": "Vulpix",
+              "level": 29,
+              "moves": ["Ember", "Quick Attack", "Confuse Ray", "Fire Spin"]
+            },
+            {
+              "pokemon_id": 126,
+              "name": "Magmar",
+              "level": 30,
+              "moves": ["Ember", "Leer", "Smog", "Fire Punch"]
+            },
+            {
+              "pokemon_id": 155,
+              "name": "Cyndaquil",
+              "level": 28,
+              "moves": ["Tackle", "Leer", "Smokescreen", "Ember"]
+            }
+          ]
+        },
+        "5": {
+          "floor_number": 5,
+          "shard_type": "infernal",
+          "is_boss": false,
+          "enemy_team": [
+            {
+              "pokemon_id": 37,
+              "name": "Vulpix",
+              "level": 30,
+              "moves": ["Ember", "Quick Attack", "Confuse Ray", "Fire Spin"]
+            },
+            {
+              "pokemon_id": 126,
+              "name": "Magmar",
+              "level": 31,
+              "moves": ["Ember", "Leer", "Smog", "Fire Punch"]
+            },
+            {
+              "pokemon_id": 155,
+              "name": "Cyndaquil",
+              "level": 29,
+              "moves": ["Tackle", "Leer", "Smokescreen", "Ember"]
+            }
+          ]
+        },
+        "6": {
+          "floor_number": 6,
+          "shard_type": "infernal",
+          "is_boss": false,
+          "enemy_team": [
+            {
+              "pokemon_id": 37,
+              "name": "Vulpix",
+              "level": 31,
+              "moves": ["Ember", "Quick Attack", "Confuse Ray", "Fire Spin"]
+            },
+            {
+              "pokemon_id": 126,
+              "name": "Magmar",
+              "level": 32,
+              "moves": ["Ember", "Leer", "Smog", "Fire Punch"]
+            },
+            {
+              "pokemon_id": 155,
+              "name": "Cyndaquil",
+              "level": 30,
+              "moves": ["Tackle", "Leer", "Smokescreen", "Ember"]
+            }
+          ]
+        },
+        "7": {
+          "floor_number": 7,
+          "shard_type": "infernal",
+          "is_boss": false,
+          "enemy_team": [
+            {
+              "pokemon_id": 37,
+              "name": "Vulpix",
+              "level": 32,
+              "moves": ["Ember", "Quick Attack", "Confuse Ray", "Fire Spin"]
+            },
+            {
+              "pokemon_id": 126,
+              "name": "Magmar",
+              "level": 33,
+              "moves": ["Ember", "Leer", "Smog", "Fire Punch"]
+            },
+            {
+              "pokemon_id": 155,
+              "name": "Cyndaquil",
+              "level": 31,
+              "moves": ["Tackle", "Leer", "Smokescreen", "Ember"]
+            }
+          ]
+        },
+        "8": {
+          "floor_number": 8,
+          "shard_type": "infernal",
+          "is_boss": false,
+          "enemy_team": [
+            {
+              "pokemon_id": 37,
+              "name": "Vulpix",
+              "level": 33,
+              "moves": ["Ember", "Quick Attack", "Confuse Ray", "Fire Spin"]
+            },
+            {
+              "pokemon_id": 126,
+              "name": "Magmar",
+              "level": 34,
+              "moves": ["Ember", "Leer", "Smog", "Fire Punch"]
+            },
+            {
+              "pokemon_id": 155,
+              "name": "Cyndaquil",
+              "level": 32,
+              "moves": ["Tackle", "Leer", "Smokescreen", "Ember"]
+            }
+          ]
+        },
+        "9": {
+          "floor_number": 9,
+          "shard_type": "infernal",
+          "is_boss": false,
+          "enemy_team": [
+            {
+              "pokemon_id": 37,
+              "name": "Vulpix",
+              "level": 34,
+              "moves": ["Ember", "Quick Attack", "Confuse Ray", "Fire Spin"]
+            },
+            {
+              "pokemon_id": 126,
+              "name": "Magmar",
+              "level": 35,
+              "moves": ["Ember", "Leer", "Smog", "Fire Punch"]
+            },
+            {
+              "pokemon_id": 155,
+              "name": "Cyndaquil",
+              "level": 33,
+              "moves": ["Tackle", "Leer", "Smokescreen", "Ember"]
+            }
+          ]
+        },
+        "10": {
+          "floor_number": 10,
+          "shard_type": "infernal",
+          "is_boss": false,
+          "enemy_team": [
+            {
+              "pokemon_id": 37,
+              "name": "Vulpix",
+              "level": 35,
+              "moves": ["Ember", "Quick Attack", "Confuse Ray", "Fire Spin"]
+            },
+            {
+              "pokemon_id": 126,
+              "name": "Magmar",
+              "level": 36,
+              "moves": ["Ember", "Leer", "Smog", "Fire Punch"]
+            },
+            {
+              "pokemon_id": 155,
+              "name": "Cyndaquil",
+              "level": 34,
+              "moves": ["Tackle", "Leer", "Smokescreen", "Ember"]
+            }
+          ]
+        },
+        "11": {
+          "floor_number": 11,
+          "shard_type": "infernal",
+          "is_boss": false,
+          "enemy_team": [
+            {
+              "pokemon_id": 37,
+              "name": "Vulpix",
+              "level": 36,
+              "moves": ["Ember", "Quick Attack", "Confuse Ray", "Fire Spin"]
+            },
+            {
+              "pokemon_id": 126,
+              "name": "Magmar",
+              "level": 37,
+              "moves": ["Ember", "Leer", "Smog", "Fire Punch"]
+            },
+            {
+              "pokemon_id": 155,
+              "name": "Cyndaquil",
+              "level": 35,
+              "moves": ["Tackle", "Leer", "Smokescreen", "Ember"]
+            }
+          ]
+        },
+        "12": {
+          "floor_number": 12,
+          "shard_type": "infernal",
+          "is_boss": false,
+          "enemy_team": [
+            {
+              "pokemon_id": 37,
+              "name": "Vulpix",
+              "level": 37,
+              "moves": ["Ember", "Quick Attack", "Confuse Ray", "Fire Spin"]
+            },
+            {
+              "pokemon_id": 126,
+              "name": "Magmar",
+              "level": 38,
+              "moves": ["Ember", "Leer", "Smog", "Fire Punch"]
+            },
+            {
+              "pokemon_id": 155,
+              "name": "Cyndaquil",
+              "level": 36,
+              "moves": ["Tackle", "Leer", "Smokescreen", "Ember"]
+            }
+          ]
+        },
+        "13": {
+          "floor_number": 13,
+          "shard_type": "infernal",
+          "is_boss": false,
+          "enemy_team": [
+            {
+              "pokemon_id": 37,
+              "name": "Vulpix",
+              "level": 38,
+              "moves": ["Ember", "Quick Attack", "Confuse Ray", "Fire Spin"]
+            },
+            {
+              "pokemon_id": 126,
+              "name": "Magmar",
+              "level": 39,
+              "moves": ["Ember", "Leer", "Smog", "Fire Punch"]
+            },
+            {
+              "pokemon_id": 155,
+              "name": "Cyndaquil",
+              "level": 37,
+              "moves": ["Tackle", "Leer", "Smokescreen", "Ember"]
+            }
+          ]
+        },
+        "14": {
+          "floor_number": 14,
+          "shard_type": "infernal",
+          "is_boss": false,
+          "enemy_team": [
+            {
+              "pokemon_id": 37,
+              "name": "Vulpix",
+              "level": 39,
+              "moves": ["Ember", "Quick Attack", "Confuse Ray", "Fire Spin"]
+            },
+            {
+              "pokemon_id": 126,
+              "name": "Magmar",
+              "level": 40,
+              "moves": ["Ember", "Leer", "Smog", "Fire Punch"]
+            },
+            {
+              "pokemon_id": 155,
+              "name": "Cyndaquil",
+              "level": 38,
+              "moves": ["Tackle", "Leer", "Smokescreen", "Ember"]
+            }
+          ]
+        },
+        "15": {
+          "floor_number": 15,
+          "shard_type": "infernal",
+          "is_boss": false,
+          "enemy_team": [
+            {
+              "pokemon_id": 37,
+              "name": "Vulpix",
+              "level": 40,
+              "moves": ["Ember", "Quick Attack", "Confuse Ray", "Fire Spin"]
+            },
+            {
+              "pokemon_id": 126,
+              "name": "Magmar",
+              "level": 41,
+              "moves": ["Ember", "Leer", "Smog", "Fire Punch"]
+            },
+            {
+              "pokemon_id": 155,
+              "name": "Cyndaquil",
+              "level": 39,
+              "moves": ["Tackle", "Leer", "Smokescreen", "Ember"]
+            }
+          ]
+        },
+        "16": {
+          "floor_number": 16,
+          "shard_type": "infernal",
+          "is_boss": false,
+          "enemy_team": [
+            {
+              "pokemon_id": 37,
+              "name": "Vulpix",
+              "level": 41,
+              "moves": ["Ember", "Quick Attack", "Confuse Ray", "Fire Spin"]
+            },
+            {
+              "pokemon_id": 126,
+              "name": "Magmar",
+              "level": 42,
+              "moves": ["Ember", "Leer", "Smog", "Fire Punch"]
+            },
+            {
+              "pokemon_id": 155,
+              "name": "Cyndaquil",
+              "level": 40,
+              "moves": ["Tackle", "Leer", "Smokescreen", "Ember"]
+            }
+          ]
+        },
+        "17": {
+          "floor_number": 17,
+          "shard_type": "infernal",
+          "is_boss": false,
+          "enemy_team": [
+            {
+              "pokemon_id": 37,
+              "name": "Vulpix",
+              "level": 42,
+              "moves": ["Ember", "Quick Attack", "Confuse Ray", "Fire Spin"]
+            },
+            {
+              "pokemon_id": 126,
+              "name": "Magmar",
+              "level": 43,
+              "moves": ["Ember", "Leer", "Smog", "Fire Punch"]
+            },
+            {
+              "pokemon_id": 155,
+              "name": "Cyndaquil",
+              "level": 41,
+              "moves": ["Tackle", "Leer", "Smokescreen", "Ember"]
+            }
+          ]
+        },
+        "18": {
+          "floor_number": 18,
+          "shard_type": "infernal",
+          "is_boss": false,
+          "enemy_team": [
+            {
+              "pokemon_id": 37,
+              "name": "Vulpix",
+              "level": 43,
+              "moves": ["Ember", "Quick Attack", "Confuse Ray", "Fire Spin"]
+            },
+            {
+              "pokemon_id": 126,
+              "name": "Magmar",
+              "level": 44,
+              "moves": ["Ember", "Leer", "Smog", "Fire Punch"]
+            },
+            {
+              "pokemon_id": 155,
+              "name": "Cyndaquil",
+              "level": 42,
+              "moves": ["Tackle", "Leer", "Smokescreen", "Ember"]
+            }
+          ]
+        },
+        "19": {
+          "floor_number": 19,
+          "shard_type": "infernal",
+          "is_boss": false,
+          "enemy_team": [
+            {
+              "pokemon_id": 37,
+              "name": "Vulpix",
+              "level": 44,
+              "moves": ["Ember", "Quick Attack", "Confuse Ray", "Fire Spin"]
+            },
+            {
+              "pokemon_id": 126,
+              "name": "Magmar",
+              "level": 45,
+              "moves": ["Ember", "Leer", "Smog", "Fire Punch"]
+            },
+            {
+              "pokemon_id": 155,
+              "name": "Cyndaquil",
+              "level": 43,
+              "moves": ["Tackle", "Leer", "Smokescreen", "Ember"]
+            }
+          ]
+        },
+        "20": {
+          "floor_number": 20,
+          "shard_type": "infernal",
+          "is_boss": true,
+          "enemy_team": [
+            {
+              "pokemon_id": 1012,
+              "name": "Shadow Moltres",
+              "level": 100,
+              "moves": ["Flamethrower", "Extreme Speed", "Crunch", "Thunder Fang"]
+            },
+            {
+              "pokemon_id": 1012,
+              "name": "Shadow Moltres",
+              "level": 100,
+              "moves": ["Fire Blast", "Megahorn", "Bounce", "Poison Jab"]
+            },
+            {
+              "pokemon_id": 1012,
+              "name": "Shadow Moltres",
+              "level": 100,
+              "moves": ["Fire Blast", "Thunderbolt", "Focus Blast", "Psychic"]
+            }
+          ]
+        },
+        "21": {
+          "floor_number": 21,
+          "shard_type": "frost",
+          "is_boss": false,
+          "enemy_team": [
+            {
+              "pokemon_id": 215,
+              "name": "Sneasel",
+              "level": 44,
+              "moves": [
+                "Quick Attack",
+                "Icy Wind",
+                "Fury Swipes",
+                "Beat Up"
+              ]
+            },
+            {
+              "pokemon_id": 361,
+              "name": "Snorunt",
+              "level": 45,
+              "moves": [
+                "Powder Snow",
+                "Headbutt",
+                "Crunch",
+                "Protect"
+              ]
+            },
+            {
+              "pokemon_id": 124,
+              "name": "Jynx",
+              "level": 46,
+              "moves": [
+                "Ice Punch",
+                "Lovely Kiss",
+                "Confusion",
+                "Fake Tears"
+              ]
+            }
+          ]
+        },
+        "22": {
+          "floor_number": 22,
+          "shard_type": "frozen",
+          "is_boss": false,
+          "enemy_team": [
+            {
+              "pokemon_id": 361,
+              "name": "Snorunt",
+              "level": 45,
+              "moves": [
+                "Powder Snow",
+                "Headbutt",
+                "Crunch",
+                "Protect"
+              ]
+            },
+            {
+              "pokemon_id": 124,
+              "name": "Jynx",
+              "level": 46,
+              "moves": [
+                "Ice Punch",
+                "Lovely Kiss",
+                "Confusion",
+                "Fake Tears"
+              ]
+            },
+            {
+              "pokemon_id": 87,
+              "name": "Dewgong",
+              "level": 47,
+              "moves": [
+                "Aurora Beam",
+                "Growl",
+                "Water Pulse",
+                "Icy Wind"
+              ]
+            }
+          ]
+        },
+        "23": {
+          "floor_number": 23,
+          "shard_type": "frozen",
+          "is_boss": false,
+          "enemy_team": [
+            {
+              "pokemon_id": 124,
+              "name": "Jynx",
+              "level": 46,
+              "moves": [
+                "Ice Punch",
+                "Lovely Kiss",
+                "Confusion",
+                "Fake Tears"
+              ]
+            },
+            {
+              "pokemon_id": 87,
+              "name": "Dewgong",
+              "level": 47,
+              "moves": [
+                "Aurora Beam",
+                "Growl",
+                "Water Pulse",
+                "Icy Wind"
+              ]
+            },
+            {
+              "pokemon_id": 225,
+              "name": "Delibird",
+              "level": 48,
+              "moves": [
+                "Present",
+                "Ice Shard",
+                "Peck",
+                "Quick Attack"
+              ]
+            }
+          ]
+        },
+        "24": {
+          "floor_number": 24,
+          "shard_type": "frozen",
+          "is_boss": false,
+          "enemy_team": [
+            {
+              "pokemon_id": 87,
+              "name": "Dewgong",
+              "level": 47,
+              "moves": [
+                "Aurora Beam",
+                "Growl",
+                "Water Pulse",
+                "Icy Wind"
+              ]
+            },
+            {
+              "pokemon_id": 225,
+              "name": "Delibird",
+              "level": 48,
+              "moves": [
+                "Present",
+                "Ice Shard",
+                "Peck",
+                "Quick Attack"
+              ]
+            },
+            {
+              "pokemon_id": 131,
+              "name": "Lapras",
+              "level": 49,
+              "moves": [
+                "Ice Beam",
+                "Body Slam",
+                "Confuse Ray",
+                "Water Pulse"
+              ]
+            }
+          ]
+        },
+        "25": {
+          "floor_number": 25,
+          "shard_type": "frozen",
+          "is_boss": false,
+          "enemy_team": [
+            {
+              "pokemon_id": 225,
+              "name": "Delibird",
+              "level": 48,
+              "moves": [
+                "Present",
+                "Ice Shard",
+                "Peck",
+                "Quick Attack"
+              ]
+            },
+            {
+              "pokemon_id": 131,
+              "name": "Lapras",
+              "level": 49,
+              "moves": [
+                "Ice Beam",
+                "Body Slam",
+                "Confuse Ray",
+                "Water Pulse"
+              ]
+            },
+            {
+              "pokemon_id": 361,
+              "name": "Snorunt",
+              "level": 50,
+              "moves": [
+                "Powder Snow",
+                "Double Team",
+                "Bite",
+                "Icy Wind"
+              ]
+            }
+          ]
+        },
+        "26": {
+          "floor_number": 26,
+          "shard_type": "frozen",
+          "is_boss": false,
+          "enemy_team": [
+            {
+              "pokemon_id": 131,
+              "name": "Lapras",
+              "level": 49,
+              "moves": [
+                "Ice Beam",
+                "Body Slam",
+                "Confuse Ray",
+                "Water Pulse"
+              ]
+            },
+            {
+              "pokemon_id": 361,
+              "name": "Snorunt",
+              "level": 50,
+              "moves": [
+                "Powder Snow",
+                "Double Team",
+                "Bite",
+                "Icy Wind"
+              ]
+            },
+            {
+              "pokemon_id": 363,
+              "name": "Spheal",
+              "level": 51,
+              "moves": [
+                "Powder Snow",
+                "Water Gun",
+                "Defense Curl",
+                "Rollout"
+              ]
+            }
+          ]
+        },
+        "27": {
+          "floor_number": 27,
+          "shard_type": "frozen",
+          "is_boss": false,
+          "enemy_team": [
+            {
+              "pokemon_id": 361,
+              "name": "Snorunt",
+              "level": 50,
+              "moves": [
+                "Powder Snow",
+                "Double Team",
+                "Bite",
+                "Icy Wind"
+              ]
+            },
+            {
+              "pokemon_id": 363,
+              "name": "Spheal",
+              "level": 51,
+              "moves": [
+                "Powder Snow",
+                "Water Gun",
+                "Defense Curl",
+                "Rollout"
+              ]
+            },
+            {
+              "pokemon_id": 238,
+              "name": "Smoochum",
+              "level": 52,
+              "moves": [
+                "Powder Snow",
+                "Confusion",
+                "Sweet Kiss",
+                "Sing"
+              ]
+            }
+          ]
+        },
+        "28": {
+          "floor_number": 28,
+          "shard_type": "frozen",
+          "is_boss": false,
+          "enemy_team": [
+            {
+              "pokemon_id": 363,
+              "name": "Spheal",
+              "level": 51,
+              "moves": [
+                "Powder Snow",
+                "Water Gun",
+                "Defense Curl",
+                "Rollout"
+              ]
+            },
+            {
+              "pokemon_id": 238,
+              "name": "Smoochum",
+              "level": 52,
+              "moves": [
+                "Powder Snow",
+                "Confusion",
+                "Sweet Kiss",
+                "Sing"
+              ]
+            },
+            {
+              "pokemon_id": 215,
+              "name": "Sneasel",
+              "level": 53,
+              "moves": [
+                "Quick Attack",
+                "Icy Wind",
+                "Fury Swipes",
+                "Beat Up"
+              ]
+            }
+          ]
+        },
+        "29": {
+          "floor_number": 29,
+          "shard_type": "frozen",
+          "is_boss": false,
+          "enemy_team": [
+            {
+              "pokemon_id": 238,
+              "name": "Smoochum",
+              "level": 52,
+              "moves": [
+                "Powder Snow",
+                "Confusion",
+                "Sweet Kiss",
+                "Sing"
+              ]
+            },
+            {
+              "pokemon_id": 215,
+              "name": "Sneasel",
+              "level": 53,
+              "moves": [
+                "Quick Attack",
+                "Icy Wind",
+                "Fury Swipes",
+                "Beat Up"
+              ]
+            },
+            {
+              "pokemon_id": 361,
+              "name": "Snorunt",
+              "level": 54,
+              "moves": [
+                "Powder Snow",
+                "Headbutt",
+                "Crunch",
+                "Protect"
+              ]
+            }
+          ]
+        },
+        "30": {
+          "floor_number": 30,
+          "shard_type": "frozen",
+          "is_boss": false,
+          "enemy_team": [
+            {
+              "pokemon_id": 215,
+              "name": "Sneasel",
+              "level": 53,
+              "moves": [
+                "Quick Attack",
+                "Icy Wind",
+                "Fury Swipes",
+                "Beat Up"
+              ]
+            },
+            {
+              "pokemon_id": 361,
+              "name": "Snorunt",
+              "level": 54,
+              "moves": [
+                "Powder Snow",
+                "Headbutt",
+                "Crunch",
+                "Protect"
+              ]
+            },
+            {
+              "pokemon_id": 124,
+              "name": "Jynx",
+              "level": 55,
+              "moves": [
+                "Ice Punch",
+                "Lovely Kiss",
+                "Confusion",
+                "Fake Tears"
+              ]
+            }
+          ]
+        },
+        "31": {
+          "floor_number": 31,
+          "shard_type": "frozen",
+          "is_boss": false,
+          "enemy_team": [
+            {
+              "pokemon_id": 361,
+              "name": "Snorunt",
+              "level": 54,
+              "moves": [
+                "Powder Snow",
+                "Headbutt",
+                "Crunch",
+                "Protect"
+              ]
+            },
+            {
+              "pokemon_id": 124,
+              "name": "Jynx",
+              "level": 55,
+              "moves": [
+                "Ice Punch",
+                "Lovely Kiss",
+                "Confusion",
+                "Fake Tears"
+              ]
+            },
+            {
+              "pokemon_id": 87,
+              "name": "Dewgong",
+              "level": 56,
+              "moves": [
+                "Aurora Beam",
+                "Growl",
+                "Water Pulse",
+                "Icy Wind"
+              ]
+            }
+          ]
+        },
+        "32": {
+          "floor_number": 32,
+          "shard_type": "frozen",
+          "is_boss": false,
+          "enemy_team": [
+            {
+              "pokemon_id": 124,
+              "name": "Jynx",
+              "level": 55,
+              "moves": [
+                "Ice Punch",
+                "Lovely Kiss",
+                "Confusion",
+                "Fake Tears"
+              ]
+            },
+            {
+              "pokemon_id": 87,
+              "name": "Dewgong",
+              "level": 56,
+              "moves": [
+                "Aurora Beam",
+                "Growl",
+                "Water Pulse",
+                "Icy Wind"
+              ]
+            },
+            {
+              "pokemon_id": 225,
+              "name": "Delibird",
+              "level": 57,
+              "moves": [
+                "Present",
+                "Ice Shard",
+                "Peck",
+                "Quick Attack"
+              ]
+            }
+          ]
+        },
+        "33": {
+          "floor_number": 33,
+          "shard_type": "frozen",
+          "is_boss": false,
+          "enemy_team": [
+            {
+              "pokemon_id": 87,
+              "name": "Dewgong",
+              "level": 56,
+              "moves": [
+                "Aurora Beam",
+                "Growl",
+                "Water Pulse",
+                "Icy Wind"
+              ]
+            },
+            {
+              "pokemon_id": 225,
+              "name": "Delibird",
+              "level": 57,
+              "moves": [
+                "Present",
+                "Ice Shard",
+                "Peck",
+                "Quick Attack"
+              ]
+            },
+            {
+              "pokemon_id": 131,
+              "name": "Lapras",
+              "level": 58,
+              "moves": [
+                "Ice Beam",
+                "Body Slam",
+                "Confuse Ray",
+                "Water Pulse"
+              ]
+            }
+          ]
+        },
+        "34": {
+          "floor_number": 34,
+          "shard_type": "frozen",
+          "is_boss": false,
+          "enemy_team": [
+            {
+              "pokemon_id": 225,
+              "name": "Delibird",
+              "level": 57,
+              "moves": [
+                "Present",
+                "Ice Shard",
+                "Peck",
+                "Quick Attack"
+              ]
+            },
+            {
+              "pokemon_id": 131,
+              "name": "Lapras",
+              "level": 58,
+              "moves": [
+                "Ice Beam",
+                "Body Slam",
+                "Confuse Ray",
+                "Water Pulse"
+              ]
+            },
+            {
+              "pokemon_id": 361,
+              "name": "Snorunt",
+              "level": 59,
+              "moves": [
+                "Powder Snow",
+                "Double Team",
+                "Bite",
+                "Icy Wind"
+              ]
+            }
+          ]
+        },
+        "35": {
+          "floor_number": 35,
+          "shard_type": "frozen",
+          "is_boss": false,
+          "enemy_team": [
+            {
+              "pokemon_id": 131,
+              "name": "Lapras",
+              "level": 58,
+              "moves": [
+                "Ice Beam",
+                "Body Slam",
+                "Confuse Ray",
+                "Water Pulse"
+              ]
+            },
+            {
+              "pokemon_id": 361,
+              "name": "Snorunt",
+              "level": 59,
+              "moves": [
+                "Powder Snow",
+                "Double Team",
+                "Bite",
+                "Icy Wind"
+              ]
+            },
+            {
+              "pokemon_id": 363,
+              "name": "Spheal",
+              "level": 60,
+              "moves": [
+                "Powder Snow",
+                "Water Gun",
+                "Defense Curl",
+                "Rollout"
+              ]
+            }
+          ]
+        },
+        "36": {
+          "floor_number": 36,
+          "shard_type": "frozen",
+          "is_boss": false,
+          "enemy_team": [
+            {
+              "pokemon_id": 361,
+              "name": "Snorunt",
+              "level": 59,
+              "moves": [
+                "Powder Snow",
+                "Double Team",
+                "Bite",
+                "Icy Wind"
+              ]
+            },
+            {
+              "pokemon_id": 363,
+              "name": "Spheal",
+              "level": 60,
+              "moves": [
+                "Powder Snow",
+                "Water Gun",
+                "Defense Curl",
+                "Rollout"
+              ]
+            },
+            {
+              "pokemon_id": 238,
+              "name": "Smoochum",
+              "level": 61,
+              "moves": [
+                "Powder Snow",
+                "Confusion",
+                "Sweet Kiss",
+                "Sing"
+              ]
+            }
+          ]
+        },
+        "37": {
+          "floor_number": 37,
+          "shard_type": "frozen",
+          "is_boss": false,
+          "enemy_team": [
+            {
+              "pokemon_id": 363,
+              "name": "Spheal",
+              "level": 60,
+              "moves": [
+                "Powder Snow",
+                "Water Gun",
+                "Defense Curl",
+                "Rollout"
+              ]
+            },
+            {
+              "pokemon_id": 238,
+              "name": "Smoochum",
+              "level": 61,
+              "moves": [
+                "Powder Snow",
+                "Confusion",
+                "Sweet Kiss",
+                "Sing"
+              ]
+            },
+            {
+              "pokemon_id": 215,
+              "name": "Sneasel",
+              "level": 62,
+              "moves": [
+                "Quick Attack",
+                "Icy Wind",
+                "Fury Swipes",
+                "Beat Up"
+              ]
+            }
+          ]
+        },
+        "38": {
+          "floor_number": 38,
+          "shard_type": "frozen",
+          "is_boss": false,
+          "enemy_team": [
+            {
+              "pokemon_id": 238,
+              "name": "Smoochum",
+              "level": 61,
+              "moves": [
+                "Powder Snow",
+                "Confusion",
+                "Sweet Kiss",
+                "Sing"
+              ]
+            },
+            {
+              "pokemon_id": 215,
+              "name": "Sneasel",
+              "level": 62,
+              "moves": [
+                "Quick Attack",
+                "Icy Wind",
+                "Fury Swipes",
+                "Beat Up"
+              ]
+            },
+            {
+              "pokemon_id": 361,
+              "name": "Snorunt",
+              "level": 63,
+              "moves": [
+                "Powder Snow",
+                "Headbutt",
+                "Crunch",
+                "Protect"
+              ]
+            }
+          ]
+        },
+        "39": {
+          "floor_number": 39,
+          "shard_type": "frozen",
+          "is_boss": false,
+          "enemy_team": [
+            {
+              "pokemon_id": 215,
+              "name": "Sneasel",
+              "level": 62,
+              "moves": [
+                "Quick Attack",
+                "Icy Wind",
+                "Fury Swipes",
+                "Beat Up"
+              ]
+            },
+            {
+              "pokemon_id": 361,
+              "name": "Snorunt",
+              "level": 63,
+              "moves": [
+                "Powder Snow",
+                "Headbutt",
+                "Crunch",
+                "Protect"
+              ]
+            },
+            {
+              "pokemon_id": 124,
+              "name": "Jynx",
+              "level": 64,
+              "moves": [
+                "Ice Punch",
+                "Lovely Kiss",
+                "Confusion",
+                "Fake Tears"
+              ]
+            }
+          ]
+        },
+        "40": {
+          "floor_number": 40,
+          "shard_type": "frozen",
+          "is_boss": true,
+          "enemy_team": [
+            {
+              "pokemon_id": 1013,
+              "name": "Shadow Articuno",
+              "level": 100,
+              "moves": [
+                "Ice Beam",
+                "Air Slash",
+                "Roost",
+                "Hurricane"
+              ]
+            },
+            {
+              "pokemon_id": 1013,
+              "name": "Shadow Articuno",
+              "level": 100,
+              "moves": [
+                "Blizzard",
+                "Calm Mind",
+                "Freeze-Dry",
+                "Extrasensory"
+              ]
+            },
+            {
+              "pokemon_id": 1013,
+              "name": "Shadow Articuno",
+              "level": 100,
+              "moves": [
+                "Ice Beam",
+                "Thunderbolt",
+                "Dark Pulse",
+                "Ancient Power"
+              ]
+            }
+          ]
+        },
+        "41": {
+          "floor_number": 41,
+          "shard_type": "storm",
+          "is_boss": false,
+          "enemy_team": [
+            {
+              "pokemon_id": 239,
+              "name": "Elekid",
+              "level": 63,
+              "moves": [
+                "Quick Attack",
+                "Thunder Punch",
+                "Leer",
+                "Shock Wave"
+              ]
+            },
+            {
+              "pokemon_id": 180,
+              "name": "Flaaffy",
+              "level": 64,
+              "moves": [
+                "Thunder Shock",
+                "Cotton Spore",
+                "Charge",
+                "Thunderbolt"
+              ]
+            },
+            {
+              "pokemon_id": 135,
+              "name": "Jolteon",
+              "level": 65,
+              "moves": [
+                "Thunder Fang",
+                "Double Kick",
+                "Pin Missile",
+                "Agility"
+              ]
+            }
+          ]
+        },
+        "42": {
+          "floor_number": 42,
+          "shard_type": "storm",
+          "is_boss": false,
+          "enemy_team": [
+            {
+              "pokemon_id": 180,
+              "name": "Flaaffy",
+              "level": 64,
+              "moves": [
+                "Thunder Shock",
+                "Cotton Spore",
+                "Charge",
+                "Thunderbolt"
+              ]
+            },
+            {
+              "pokemon_id": 135,
+              "name": "Jolteon",
+              "level": 65,
+              "moves": [
+                "Thunder Fang",
+                "Double Kick",
+                "Pin Missile",
+                "Agility"
+              ]
+            },
+            {
+              "pokemon_id": 145,
+              "name": "Zapdos",
+              "level": 66,
+              "moves": [
+                "Drill Peck",
+                "Thunder Shock",
+                "Charge",
+                "Ancient Power"
+              ]
+            }
+          ]
+        },
+        "43": {
+          "floor_number": 43,
+          "shard_type": "storm",
+          "is_boss": false,
+          "enemy_team": [
+            {
+              "pokemon_id": 135,
+              "name": "Jolteon",
+              "level": 65,
+              "moves": [
+                "Thunder Fang",
+                "Double Kick",
+                "Pin Missile",
+                "Agility"
+              ]
+            },
+            {
+              "pokemon_id": 145,
+              "name": "Zapdos",
+              "level": 66,
+              "moves": [
+                "Drill Peck",
+                "Thunder Shock",
+                "Charge",
+                "Ancient Power"
+              ]
+            },
+            {
+              "pokemon_id": 25,
+              "name": "Pikachu",
+              "level": 67,
+              "moves": [
+                "Thunder Shock",
+                "Quick Attack",
+                "Tail Whip",
+                "Electro Ball"
+              ]
+            }
+          ]
+        },
+        "44": {
+          "floor_number": 44,
+          "shard_type": "storm",
+          "is_boss": false,
+          "enemy_team": [
+            {
+              "pokemon_id": 145,
+              "name": "Zapdos",
+              "level": 66,
+              "moves": [
+                "Drill Peck",
+                "Thunder Shock",
+                "Charge",
+                "Ancient Power"
+              ]
+            },
+            {
+              "pokemon_id": 25,
+              "name": "Pikachu",
+              "level": 67,
+              "moves": [
+                "Thunder Shock",
+                "Quick Attack",
+                "Tail Whip",
+                "Electro Ball"
+              ]
+            },
+            {
+              "pokemon_id": 81,
+              "name": "Magnemite",
+              "level": 68,
+              "moves": [
+                "Thunder Shock",
+                "Supersonic",
+                "Sonic Boom",
+                "Spark"
+              ]
+            }
+          ]
+        },
+        "45": {
+          "floor_number": 45,
+          "shard_type": "storm",
+          "is_boss": false,
+          "enemy_team": [
+            {
+              "pokemon_id": 25,
+              "name": "Pikachu",
+              "level": 67,
+              "moves": [
+                "Thunder Shock",
+                "Quick Attack",
+                "Tail Whip",
+                "Electro Ball"
+              ]
+            },
+            {
+              "pokemon_id": 81,
+              "name": "Magnemite",
+              "level": 68,
+              "moves": [
+                "Thunder Shock",
+                "Supersonic",
+                "Sonic Boom",
+                "Spark"
+              ]
+            },
+            {
+              "pokemon_id": 100,
+              "name": "Voltorb",
+              "level": 69,
+              "moves": [
+                "Tackle",
+                "Charge",
+                "Spark",
+                "Screech"
+              ]
+            }
+          ]
+        },
+        "46": {
+          "floor_number": 46,
+          "shard_type": "storm",
+          "is_boss": false,
+          "enemy_team": [
+            {
+              "pokemon_id": 81,
+              "name": "Magnemite",
+              "level": 68,
+              "moves": [
+                "Thunder Shock",
+                "Supersonic",
+                "Sonic Boom",
+                "Spark"
+              ]
+            },
+            {
+              "pokemon_id": 100,
+              "name": "Voltorb",
+              "level": 69,
+              "moves": [
+                "Tackle",
+                "Charge",
+                "Spark",
+                "Screech"
+              ]
+            },
+            {
+              "pokemon_id": 179,
+              "name": "Mareep",
+              "level": 70,
+              "moves": [
+                "Thunder Shock",
+                "Growl",
+                "Tackle",
+                "Thunder Wave"
+              ]
+            }
+          ]
+        },
+        "47": {
+          "floor_number": 47,
+          "shard_type": "storm",
+          "is_boss": false,
+          "enemy_team": [
+            {
+              "pokemon_id": 100,
+              "name": "Voltorb",
+              "level": 69,
+              "moves": [
+                "Tackle",
+                "Charge",
+                "Spark",
+                "Screech"
+              ]
+            },
+            {
+              "pokemon_id": 179,
+              "name": "Mareep",
+              "level": 70,
+              "moves": [
+                "Thunder Shock",
+                "Growl",
+                "Tackle",
+                "Thunder Wave"
+              ]
+            },
+            {
+              "pokemon_id": 309,
+              "name": "Electrike",
+              "level": 71,
+              "moves": [
+                "Tackle",
+                "Thunder Wave",
+                "Spark",
+                "Quick Attack"
+              ]
+            }
+          ]
+        },
+        "48": {
+          "floor_number": 48,
+          "shard_type": "storm",
+          "is_boss": false,
+          "enemy_team": [
+            {
+              "pokemon_id": 179,
+              "name": "Mareep",
+              "level": 70,
+              "moves": [
+                "Thunder Shock",
+                "Growl",
+                "Tackle",
+                "Thunder Wave"
+              ]
+            },
+            {
+              "pokemon_id": 309,
+              "name": "Electrike",
+              "level": 71,
+              "moves": [
+                "Tackle",
+                "Thunder Wave",
+                "Spark",
+                "Quick Attack"
+              ]
+            },
+            {
+              "pokemon_id": 239,
+              "name": "Elekid",
+              "level": 72,
+              "moves": [
+                "Quick Attack",
+                "Thunder Punch",
+                "Leer",
+                "Shock Wave"
+              ]
+            }
+          ]
+        },
+        "49": {
+          "floor_number": 49,
+          "shard_type": "storm",
+          "is_boss": false,
+          "enemy_team": [
+            {
+              "pokemon_id": 309,
+              "name": "Electrike",
+              "level": 71,
+              "moves": [
+                "Tackle",
+                "Thunder Wave",
+                "Spark",
+                "Quick Attack"
+              ]
+            },
+            {
+              "pokemon_id": 239,
+              "name": "Elekid",
+              "level": 72,
+              "moves": [
+                "Quick Attack",
+                "Thunder Punch",
+                "Leer",
+                "Shock Wave"
+              ]
+            },
+            {
+              "pokemon_id": 180,
+              "name": "Flaaffy",
+              "level": 73,
+              "moves": [
+                "Thunder Shock",
+                "Cotton Spore",
+                "Charge",
+                "Thunderbolt"
+              ]
+            }
+          ]
+        },
+        "50": {
+          "floor_number": 50,
+          "shard_type": "storm",
+          "is_boss": false,
+          "enemy_team": [
+            {
+              "pokemon_id": 239,
+              "name": "Elekid",
+              "level": 72,
+              "moves": [
+                "Quick Attack",
+                "Thunder Punch",
+                "Leer",
+                "Shock Wave"
+              ]
+            },
+            {
+              "pokemon_id": 180,
+              "name": "Flaaffy",
+              "level": 73,
+              "moves": [
+                "Thunder Shock",
+                "Cotton Spore",
+                "Charge",
+                "Thunderbolt"
+              ]
+            },
+            {
+              "pokemon_id": 135,
+              "name": "Jolteon",
+              "level": 74,
+              "moves": [
+                "Thunder Fang",
+                "Double Kick",
+                "Pin Missile",
+                "Agility"
+              ]
+            }
+          ]
+        },
+        "51": {
+          "floor_number": 51,
+          "shard_type": "storm",
+          "is_boss": false,
+          "enemy_team": [
+            {
+              "pokemon_id": 180,
+              "name": "Flaaffy",
+              "level": 73,
+              "moves": [
+                "Thunder Shock",
+                "Cotton Spore",
+                "Charge",
+                "Thunderbolt"
+              ]
+            },
+            {
+              "pokemon_id": 135,
+              "name": "Jolteon",
+              "level": 74,
+              "moves": [
+                "Thunder Fang",
+                "Double Kick",
+                "Pin Missile",
+                "Agility"
+              ]
+            },
+            {
+              "pokemon_id": 145,
+              "name": "Zapdos",
+              "level": 75,
+              "moves": [
+                "Drill Peck",
+                "Thunder Shock",
+                "Charge",
+                "Ancient Power"
+              ]
+            }
+          ]
+        },
+        "52": {
+          "floor_number": 52,
+          "shard_type": "storm",
+          "is_boss": false,
+          "enemy_team": [
+            {
+              "pokemon_id": 135,
+              "name": "Jolteon",
+              "level": 74,
+              "moves": [
+                "Thunder Fang",
+                "Double Kick",
+                "Pin Missile",
+                "Agility"
+              ]
+            },
+            {
+              "pokemon_id": 145,
+              "name": "Zapdos",
+              "level": 75,
+              "moves": [
+                "Drill Peck",
+                "Thunder Shock",
+                "Charge",
+                "Ancient Power"
+              ]
+            },
+            {
+              "pokemon_id": 25,
+              "name": "Pikachu",
+              "level": 76,
+              "moves": [
+                "Thunder Shock",
+                "Quick Attack",
+                "Tail Whip",
+                "Electro Ball"
+              ]
+            }
+          ]
+        },
+        "53": {
+          "floor_number": 53,
+          "shard_type": "storm",
+          "is_boss": false,
+          "enemy_team": [
+            {
+              "pokemon_id": 145,
+              "name": "Zapdos",
+              "level": 75,
+              "moves": [
+                "Drill Peck",
+                "Thunder Shock",
+                "Charge",
+                "Ancient Power"
+              ]
+            },
+            {
+              "pokemon_id": 25,
+              "name": "Pikachu",
+              "level": 76,
+              "moves": [
+                "Thunder Shock",
+                "Quick Attack",
+                "Tail Whip",
+                "Electro Ball"
+              ]
+            },
+            {
+              "pokemon_id": 81,
+              "name": "Magnemite",
+              "level": 77,
+              "moves": [
+                "Thunder Shock",
+                "Supersonic",
+                "Sonic Boom",
+                "Spark"
+              ]
+            }
+          ]
+        },
+        "54": {
+          "floor_number": 54,
+          "shard_type": "storm",
+          "is_boss": false,
+          "enemy_team": [
+            {
+              "pokemon_id": 25,
+              "name": "Pikachu",
+              "level": 76,
+              "moves": [
+                "Thunder Shock",
+                "Quick Attack",
+                "Tail Whip",
+                "Electro Ball"
+              ]
+            },
+            {
+              "pokemon_id": 81,
+              "name": "Magnemite",
+              "level": 77,
+              "moves": [
+                "Thunder Shock",
+                "Supersonic",
+                "Sonic Boom",
+                "Spark"
+              ]
+            },
+            {
+              "pokemon_id": 100,
+              "name": "Voltorb",
+              "level": 78,
+              "moves": [
+                "Tackle",
+                "Charge",
+                "Spark",
+                "Screech"
+              ]
+            }
+          ]
+        },
+        "55": {
+          "floor_number": 55,
+          "shard_type": "storm",
+          "is_boss": false,
+          "enemy_team": [
+            {
+              "pokemon_id": 81,
+              "name": "Magnemite",
+              "level": 77,
+              "moves": [
+                "Thunder Shock",
+                "Supersonic",
+                "Sonic Boom",
+                "Spark"
+              ]
+            },
+            {
+              "pokemon_id": 100,
+              "name": "Voltorb",
+              "level": 78,
+              "moves": [
+                "Tackle",
+                "Charge",
+                "Spark",
+                "Screech"
+              ]
+            },
+            {
+              "pokemon_id": 179,
+              "name": "Mareep",
+              "level": 79,
+              "moves": [
+                "Thunder Shock",
+                "Growl",
+                "Tackle",
+                "Thunder Wave"
+              ]
+            }
+          ]
+        },
+        "56": {
+          "floor_number": 56,
+          "shard_type": "storm",
+          "is_boss": false,
+          "enemy_team": [
+            {
+              "pokemon_id": 100,
+              "name": "Voltorb",
+              "level": 78,
+              "moves": [
+                "Tackle",
+                "Charge",
+                "Spark",
+                "Screech"
+              ]
+            },
+            {
+              "pokemon_id": 179,
+              "name": "Mareep",
+              "level": 79,
+              "moves": [
+                "Thunder Shock",
+                "Growl",
+                "Tackle",
+                "Thunder Wave"
+              ]
+            },
+            {
+              "pokemon_id": 309,
+              "name": "Electrike",
+              "level": 80,
+              "moves": [
+                "Tackle",
+                "Thunder Wave",
+                "Spark",
+                "Quick Attack"
+              ]
+            }
+          ]
+        },
+        "57": {
+          "floor_number": 57,
+          "shard_type": "storm",
+          "is_boss": false,
+          "enemy_team": [
+            {
+              "pokemon_id": 179,
+              "name": "Mareep",
+              "level": 79,
+              "moves": [
+                "Thunder Shock",
+                "Growl",
+                "Tackle",
+                "Thunder Wave"
+              ]
+            },
+            {
+              "pokemon_id": 309,
+              "name": "Electrike",
+              "level": 80,
+              "moves": [
+                "Tackle",
+                "Thunder Wave",
+                "Spark",
+                "Quick Attack"
+              ]
+            },
+            {
+              "pokemon_id": 239,
+              "name": "Elekid",
+              "level": 81,
+              "moves": [
+                "Quick Attack",
+                "Thunder Punch",
+                "Leer",
+                "Shock Wave"
+              ]
+            }
+          ]
+        },
+        "58": {
+          "floor_number": 58,
+          "shard_type": "storm",
+          "is_boss": false,
+          "enemy_team": [
+            {
+              "pokemon_id": 309,
+              "name": "Electrike",
+              "level": 80,
+              "moves": [
+                "Tackle",
+                "Thunder Wave",
+                "Spark",
+                "Quick Attack"
+              ]
+            },
+            {
+              "pokemon_id": 239,
+              "name": "Elekid",
+              "level": 81,
+              "moves": [
+                "Quick Attack",
+                "Thunder Punch",
+                "Leer",
+                "Shock Wave"
+              ]
+            },
+            {
+              "pokemon_id": 180,
+              "name": "Flaaffy",
+              "level": 82,
+              "moves": [
+                "Thunder Shock",
+                "Cotton Spore",
+                "Charge",
+                "Thunderbolt"
+              ]
+            }
+          ]
+        },
+        "59": {
+          "floor_number": 59,
+          "shard_type": "storm",
+          "is_boss": false,
+          "enemy_team": [
+            {
+              "pokemon_id": 239,
+              "name": "Elekid",
+              "level": 81,
+              "moves": [
+                "Quick Attack",
+                "Thunder Punch",
+                "Leer",
+                "Shock Wave"
+              ]
+            },
+            {
+              "pokemon_id": 180,
+              "name": "Flaaffy",
+              "level": 82,
+              "moves": [
+                "Thunder Shock",
+                "Cotton Spore",
+                "Charge",
+                "Thunderbolt"
+              ]
+            },
+            {
+              "pokemon_id": 135,
+              "name": "Jolteon",
+              "level": 83,
+              "moves": [
+                "Thunder Fang",
+                "Double Kick",
+                "Pin Missile",
+                "Agility"
+              ]
+            }
+          ]
+        },
+        "60": {
+          "floor_number": 60,
+          "shard_type": "storm",
+          "is_boss": true,
+          "enemy_team": [
+            {
+              "pokemon_id": 1014,
+              "name": "Shadow Zapdos",
+              "level": 100,
+              "moves": [
+                "Thunderbolt",
+                "Drill Peck",
+                "Ancient Power",
+                "Rain Dance"
+              ]
+            },
+            {
+              "pokemon_id": 1014,
+              "name": "Shadow Zapdos",
+              "level": 100,
+              "moves": [
+                "Discharge",
+                "Heat Wave",
+                "Roost",
+                "Charge Beam"
+              ]
+            },
+            {
+              "pokemon_id": 1014,
+              "name": "Shadow Zapdos",
+              "level": 100,
+              "moves": [
+                "Thunder",
+                "Hurricane",
+                "Calm Mind",
+                "Hidden Power"
+              ]
+            }
+          ]
+        },
+        "61": {
+          "floor_number": 61,
+          "shard_type": "sea",
+          "is_boss": false,
+          "enemy_team": [
+            {
+              "pokemon_id": 72,
+              "name": "Tentacool",
+              "level": 82,
+              "moves": [
+                "Acid",
+                "Bubble Beam",
+                "Wrap",
+                "Supersonic"
+              ]
+            },
+            {
+              "pokemon_id": 226,
+              "name": "Mantine",
+              "level": 83,
+              "moves": [
+                "Wing Attack",
+                "Water Pulse",
+                "Agility",
+                "Confuse Ray"
+              ]
+            },
+            {
+              "pokemon_id": 54,
+              "name": "Psyduck",
+              "level": 84,
+              "moves": [
+                "Water Gun",
+                "Confusion",
+                "Disable",
+                "Fury Swipes"
+              ]
+            }
+          ]
+        },
+        "62": {
+          "floor_number": 62,
+          "shard_type": "sea",
+          "is_boss": false,
+          "enemy_team": [
+            {
+              "pokemon_id": 226,
+              "name": "Mantine",
+              "level": 83,
+              "moves": [
+                "Wing Attack",
+                "Water Pulse",
+                "Agility",
+                "Confuse Ray"
+              ]
+            },
+            {
+              "pokemon_id": 54,
+              "name": "Psyduck",
+              "level": 84,
+              "moves": [
+                "Water Gun",
+                "Confusion",
+                "Disable",
+                "Fury Swipes"
+              ]
+            },
+            {
+              "pokemon_id": 90,
+              "name": "Shellder",
+              "level": 85,
+              "moves": [
+                "Tackle",
+                "Withdraw",
+                "Icicle Spear",
+                "Protect"
+              ]
+            }
+          ]
+        },
+        "63": {
+          "floor_number": 63,
+          "shard_type": "sea",
+          "is_boss": false,
+          "enemy_team": [
+            {
+              "pokemon_id": 54,
+              "name": "Psyduck",
+              "level": 84,
+              "moves": [
+                "Water Gun",
+                "Confusion",
+                "Disable",
+                "Fury Swipes"
+              ]
+            },
+            {
+              "pokemon_id": 90,
+              "name": "Shellder",
+              "level": 85,
+              "moves": [
+                "Tackle",
+                "Withdraw",
+                "Icicle Spear",
+                "Protect"
+              ]
+            },
+            {
+              "pokemon_id": 147,
+              "name": "Dratini",
+              "level": 86,
+              "moves": [
+                "Wrap",
+                "Twister",
+                "Thunder Wave",
+                "Slam"
+              ]
+            }
+          ]
+        },
+        "64": {
+          "floor_number": 64,
+          "shard_type": "sea",
+          "is_boss": false,
+          "enemy_team": [
+            {
+              "pokemon_id": 90,
+              "name": "Shellder",
+              "level": 85,
+              "moves": [
+                "Tackle",
+                "Withdraw",
+                "Icicle Spear",
+                "Protect"
+              ]
+            },
+            {
+              "pokemon_id": 147,
+              "name": "Dratini",
+              "level": 86,
+              "moves": [
+                "Wrap",
+                "Twister",
+                "Thunder Wave",
+                "Slam"
+              ]
+            },
+            {
+              "pokemon_id": 278,
+              "name": "Wingull",
+              "level": 87,
+              "moves": [
+                "Water Gun",
+                "Quick Attack",
+                "Wing Attack",
+                "Supersonic"
+              ]
+            }
+          ]
+        },
+        "65": {
+          "floor_number": 65,
+          "shard_type": "sea",
+          "is_boss": false,
+          "enemy_team": [
+            {
+              "pokemon_id": 147,
+              "name": "Dratini",
+              "level": 86,
+              "moves": [
+                "Wrap",
+                "Twister",
+                "Thunder Wave",
+                "Slam"
+              ]
+            },
+            {
+              "pokemon_id": 278,
+              "name": "Wingull",
+              "level": 87,
+              "moves": [
+                "Water Gun",
+                "Quick Attack",
+                "Wing Attack",
+                "Supersonic"
+              ]
+            },
+            {
+              "pokemon_id": 199,
+              "name": "Slowking",
+              "level": 88,
+              "moves": [
+                "Water Pulse",
+                "Confusion",
+                "Yawn",
+                "Disable"
+              ]
+            }
+          ]
+        },
+        "66": {
+          "floor_number": 66,
+          "shard_type": "sea",
+          "is_boss": false,
+          "enemy_team": [
+            {
+              "pokemon_id": 278,
+              "name": "Wingull",
+              "level": 87,
+              "moves": [
+                "Water Gun",
+                "Quick Attack",
+                "Wing Attack",
+                "Supersonic"
+              ]
+            },
+            {
+              "pokemon_id": 199,
+              "name": "Slowking",
+              "level": 88,
+              "moves": [
+                "Water Pulse",
+                "Confusion",
+                "Yawn",
+                "Disable"
+              ]
+            },
+            {
+              "pokemon_id": 370,
+              "name": "Luvdisc",
+              "level": 89,
+              "moves": [
+                "Water Gun",
+                "Agility",
+                "Take Down",
+                "Charm"
+              ]
+            }
+          ]
+        },
+        "67": {
+          "floor_number": 67,
+          "shard_type": "sea",
+          "is_boss": false,
+          "enemy_team": [
+            {
+              "pokemon_id": 199,
+              "name": "Slowking",
+              "level": 88,
+              "moves": [
+                "Water Pulse",
+                "Confusion",
+                "Yawn",
+                "Disable"
+              ]
+            },
+            {
+              "pokemon_id": 370,
+              "name": "Luvdisc",
+              "level": 89,
+              "moves": [
+                "Water Gun",
+                "Agility",
+                "Take Down",
+                "Charm"
+              ]
+            },
+            {
+              "pokemon_id": 349,
+              "name": "Feebas",
+              "level": 90,
+              "moves": [
+                "Splash",
+                "Tackle",
+                "Flail",
+                "Mirror Coat"
+              ]
+            }
+          ]
+        },
+        "68": {
+          "floor_number": 68,
+          "shard_type": "sea",
+          "is_boss": false,
+          "enemy_team": [
+            {
+              "pokemon_id": 370,
+              "name": "Luvdisc",
+              "level": 89,
+              "moves": [
+                "Water Gun",
+                "Agility",
+                "Take Down",
+                "Charm"
+              ]
+            },
+            {
+              "pokemon_id": 349,
+              "name": "Feebas",
+              "level": 90,
+              "moves": [
+                "Splash",
+                "Tackle",
+                "Flail",
+                "Mirror Coat"
+              ]
+            },
+            {
+              "pokemon_id": 72,
+              "name": "Tentacool",
+              "level": 91,
+              "moves": [
+                "Acid",
+                "Bubble Beam",
+                "Wrap",
+                "Supersonic"
+              ]
+            }
+          ]
+        },
+        "69": {
+          "floor_number": 69,
+          "shard_type": "sea",
+          "is_boss": false,
+          "enemy_team": [
+            {
+              "pokemon_id": 349,
+              "name": "Feebas",
+              "level": 90,
+              "moves": [
+                "Splash",
+                "Tackle",
+                "Flail",
+                "Mirror Coat"
+              ]
+            },
+            {
+              "pokemon_id": 72,
+              "name": "Tentacool",
+              "level": 91,
+              "moves": [
+                "Acid",
+                "Bubble Beam",
+                "Wrap",
+                "Supersonic"
+              ]
+            },
+            {
+              "pokemon_id": 226,
+              "name": "Mantine",
+              "level": 92,
+              "moves": [
+                "Wing Attack",
+                "Water Pulse",
+                "Agility",
+                "Confuse Ray"
+              ]
+            }
+          ]
+        },
+        "70": {
+          "floor_number": 70,
+          "shard_type": "sea",
+          "is_boss": false,
+          "enemy_team": [
+            {
+              "pokemon_id": 72,
+              "name": "Tentacool",
+              "level": 91,
+              "moves": [
+                "Acid",
+                "Bubble Beam",
+                "Wrap",
+                "Supersonic"
+              ]
+            },
+            {
+              "pokemon_id": 226,
+              "name": "Mantine",
+              "level": 92,
+              "moves": [
+                "Wing Attack",
+                "Water Pulse",
+                "Agility",
+                "Confuse Ray"
+              ]
+            },
+            {
+              "pokemon_id": 54,
+              "name": "Psyduck",
+              "level": 93,
+              "moves": [
+                "Water Gun",
+                "Confusion",
+                "Disable",
+                "Fury Swipes"
+              ]
+            }
+          ]
+        },
+        "71": {
+          "floor_number": 71,
+          "shard_type": "sea",
+          "is_boss": false,
+          "enemy_team": [
+            {
+              "pokemon_id": 226,
+              "name": "Mantine",
+              "level": 92,
+              "moves": [
+                "Wing Attack",
+                "Water Pulse",
+                "Agility",
+                "Confuse Ray"
+              ]
+            },
+            {
+              "pokemon_id": 54,
+              "name": "Psyduck",
+              "level": 93,
+              "moves": [
+                "Water Gun",
+                "Confusion",
+                "Disable",
+                "Fury Swipes"
+              ]
+            },
+            {
+              "pokemon_id": 90,
+              "name": "Shellder",
+              "level": 94,
+              "moves": [
+                "Tackle",
+                "Withdraw",
+                "Icicle Spear",
+                "Protect"
+              ]
+            }
+          ]
+        },
+        "72": {
+          "floor_number": 72,
+          "shard_type": "sea",
+          "is_boss": false,
+          "enemy_team": [
+            {
+              "pokemon_id": 54,
+              "name": "Psyduck",
+              "level": 93,
+              "moves": [
+                "Water Gun",
+                "Confusion",
+                "Disable",
+                "Fury Swipes"
+              ]
+            },
+            {
+              "pokemon_id": 90,
+              "name": "Shellder",
+              "level": 94,
+              "moves": [
+                "Tackle",
+                "Withdraw",
+                "Icicle Spear",
+                "Protect"
+              ]
+            },
+            {
+              "pokemon_id": 147,
+              "name": "Dratini",
+              "level": 95,
+              "moves": [
+                "Wrap",
+                "Twister",
+                "Thunder Wave",
+                "Slam"
+              ]
+            }
+          ]
+        },
+        "73": {
+          "floor_number": 73,
+          "shard_type": "sea",
+          "is_boss": false,
+          "enemy_team": [
+            {
+              "pokemon_id": 90,
+              "name": "Shellder",
+              "level": 94,
+              "moves": [
+                "Tackle",
+                "Withdraw",
+                "Icicle Spear",
+                "Protect"
+              ]
+            },
+            {
+              "pokemon_id": 147,
+              "name": "Dratini",
+              "level": 95,
+              "moves": [
+                "Wrap",
+                "Twister",
+                "Thunder Wave",
+                "Slam"
+              ]
+            },
+            {
+              "pokemon_id": 278,
+              "name": "Wingull",
+              "level": 96,
+              "moves": [
+                "Water Gun",
+                "Quick Attack",
+                "Wing Attack",
+                "Supersonic"
+              ]
+            }
+          ]
+        },
+        "74": {
+          "floor_number": 74,
+          "shard_type": "sea",
+          "is_boss": false,
+          "enemy_team": [
+            {
+              "pokemon_id": 147,
+              "name": "Dratini",
+              "level": 95,
+              "moves": [
+                "Wrap",
+                "Twister",
+                "Thunder Wave",
+                "Slam"
+              ]
+            },
+            {
+              "pokemon_id": 278,
+              "name": "Wingull",
+              "level": 96,
+              "moves": [
+                "Water Gun",
+                "Quick Attack",
+                "Wing Attack",
+                "Supersonic"
+              ]
+            },
+            {
+              "pokemon_id": 199,
+              "name": "Slowking",
+              "level": 97,
+              "moves": [
+                "Water Pulse",
+                "Confusion",
+                "Yawn",
+                "Disable"
+              ]
+            }
+          ]
+        },
+        "75": {
+          "floor_number": 75,
+          "shard_type": "sea",
+          "is_boss": false,
+          "enemy_team": [
+            {
+              "pokemon_id": 278,
+              "name": "Wingull",
+              "level": 96,
+              "moves": [
+                "Water Gun",
+                "Quick Attack",
+                "Wing Attack",
+                "Supersonic"
+              ]
+            },
+            {
+              "pokemon_id": 199,
+              "name": "Slowking",
+              "level": 97,
+              "moves": [
+                "Water Pulse",
+                "Confusion",
+                "Yawn",
+                "Disable"
+              ]
+            },
+            {
+              "pokemon_id": 370,
+              "name": "Luvdisc",
+              "level": 98,
+              "moves": [
+                "Water Gun",
+                "Agility",
+                "Take Down",
+                "Charm"
+              ]
+            }
+          ]
+        },
+        "76": {
+          "floor_number": 76,
+          "shard_type": "sea",
+          "is_boss": false,
+          "enemy_team": [
+            {
+              "pokemon_id": 199,
+              "name": "Slowking",
+              "level": 97,
+              "moves": [
+                "Water Pulse",
+                "Confusion",
+                "Yawn",
+                "Disable"
+              ]
+            },
+            {
+              "pokemon_id": 370,
+              "name": "Luvdisc",
+              "level": 98,
+              "moves": [
+                "Water Gun",
+                "Agility",
+                "Take Down",
+                "Charm"
+              ]
+            },
+            {
+              "pokemon_id": 349,
+              "name": "Feebas",
+              "level": 99,
+              "moves": [
+                "Splash",
+                "Tackle",
+                "Flail",
+                "Mirror Coat"
+              ]
+            }
+          ]
+        },
+        "77": {
+          "floor_number": 77,
+          "shard_type": "sea",
+          "is_boss": false,
+          "enemy_team": [
+            {
+              "pokemon_id": 370,
+              "name": "Luvdisc",
+              "level": 98,
+              "moves": [
+                "Water Gun",
+                "Agility",
+                "Take Down",
+                "Charm"
+              ]
+            },
+            {
+              "pokemon_id": 349,
+              "name": "Feebas",
+              "level": 99,
+              "moves": [
+                "Splash",
+                "Tackle",
+                "Flail",
+                "Mirror Coat"
+              ]
+            },
+            {
+              "pokemon_id": 72,
+              "name": "Tentacool",
+              "level": 100,
+              "moves": [
+                "Acid",
+                "Bubble Beam",
+                "Wrap",
+                "Supersonic"
+              ]
+            }
+          ]
+        },
+        "78": {
+          "floor_number": 78,
+          "shard_type": "sea",
+          "is_boss": false,
+          "enemy_team": [
+            {
+              "pokemon_id": 349,
+              "name": "Feebas",
+              "level": 99,
+              "moves": [
+                "Splash",
+                "Tackle",
+                "Flail",
+                "Mirror Coat"
+              ]
+            },
+            {
+              "pokemon_id": 72,
+              "name": "Tentacool",
+              "level": 100,
+              "moves": [
+                "Acid",
+                "Bubble Beam",
+                "Wrap",
+                "Supersonic"
+              ]
+            },
+            {
+              "pokemon_id": 226,
+              "name": "Mantine",
+              "level": 101,
+              "moves": [
+                "Wing Attack",
+                "Water Pulse",
+                "Agility",
+                "Confuse Ray"
+              ]
+            }
+          ]
+        },
+        "79": {
+          "floor_number": 79,
+          "shard_type": "sea",
+          "is_boss": false,
+          "enemy_team": [
+            {
+              "pokemon_id": 72,
+              "name": "Tentacool",
+              "level": 100,
+              "moves": [
+                "Acid",
+                "Bubble Beam",
+                "Wrap",
+                "Supersonic"
+              ]
+            },
+            {
+              "pokemon_id": 226,
+              "name": "Mantine",
+              "level": 101,
+              "moves": [
+                "Wing Attack",
+                "Water Pulse",
+                "Agility",
+                "Confuse Ray"
+              ]
+            },
+            {
+              "pokemon_id": 54,
+              "name": "Psyduck",
+              "level": 102,
+              "moves": [
+                "Water Gun",
+                "Confusion",
+                "Disable",
+                "Fury Swipes"
+              ]
+            }
+          ]
+        },
+        "80": {
+          "floor_number": 80,
+          "shard_type": "sea",
+          "is_boss": true,
+          "enemy_team": [
+            {
+              "pokemon_id": 1015,
+              "name": "Shadow Lugia",
+              "level": 100,
+              "moves": [
+                "Aeroblast",
+                "Psychic",
+                "Calm Mind",
+                "Recover"
+              ]
+            },
+            {
+              "pokemon_id": 1015,
+              "name": "Shadow Lugia",
+              "level": 100,
+              "moves": [
+                "Shadow Ball",
+                "Hydro Pump",
+                "Extrasensory",
+                "Roost"
+              ]
+            },
+            {
+              "pokemon_id": 1015,
+              "name": "Shadow Lugia",
+              "level": 100,
+              "moves": [
+                "Hurricane",
+                "Ice Beam",
+                "Ancient Power",
+                "Protect"
+              ]
+            }
+          ]
+        },
+        "81": {
+          "floor_number": 81,
+          "shard_type": "dragon",
+          "is_boss": false,
+          "enemy_team": [
+            {
+              "pokemon_id": 147,
+              "name": "Dratini",
+              "level": 100,
+              "moves": [
+                "Dragon Rage",
+                "Twister",
+                "Thunder Wave",
+                "Slam"
+              ]
+            },
+            {
+              "pokemon_id": 148,
+              "name": "Dragonair",
+              "level": 101,
+              "moves": [
+                "Dragon Rage",
+                "Twister",
+                "Slam",
+                "Agility"
+              ]
+            },
+            {
+              "pokemon_id": 230,
+              "name": "Kingdra",
+              "level": 102,
+              "moves": [
+                "Dragon Rage",
+                "Water Gun",
+                "Smokescreen",
+                "Focus Energy"
+              ]
+            }
+          ]
+        },
+        "82": {
+          "floor_number": 82,
+          "shard_type": "dragon",
+          "is_boss": false,
+          "enemy_team": [
+            {
+              "pokemon_id": 148,
+              "name": "Dragonair",
+              "level": 101,
+              "moves": [
+                "Dragon Rage",
+                "Twister",
+                "Slam",
+                "Agility"
+              ]
+            },
+            {
+              "pokemon_id": 230,
+              "name": "Kingdra",
+              "level": 102,
+              "moves": [
+                "Dragon Rage",
+                "Water Gun",
+                "Smokescreen",
+                "Focus Energy"
+              ]
+            },
+            {
+              "pokemon_id": 329,
+              "name": "Vibrava",
+              "level": 103,
+              "moves": [
+                "Dragon Breath",
+                "Sand Tomb",
+                "Crunch",
+                "Screech"
+              ]
+            }
+          ]
+        },
+        "83": {
+          "floor_number": 83,
+          "shard_type": "dragon",
+          "is_boss": false,
+          "enemy_team": [
+            {
+              "pokemon_id": 230,
+              "name": "Kingdra",
+              "level": 102,
+              "moves": [
+                "Dragon Rage",
+                "Water Gun",
+                "Smokescreen",
+                "Focus Energy"
+              ]
+            },
+            {
+              "pokemon_id": 329,
+              "name": "Vibrava",
+              "level": 103,
+              "moves": [
+                "Dragon Breath",
+                "Sand Tomb",
+                "Crunch",
+                "Screech"
+              ]
+            },
+            {
+              "pokemon_id": 372,
+              "name": "Shelgon",
+              "level": 104,
+              "moves": [
+                "Dragon Claw",
+                "Protect",
+                "Dragon Rage",
+                "Crunch"
+              ]
+            }
+          ]
+        },
+        "84": {
+          "floor_number": 84,
+          "shard_type": "dragon",
+          "is_boss": false,
+          "enemy_team": [
+            {
+              "pokemon_id": 329,
+              "name": "Vibrava",
+              "level": 103,
+              "moves": [
+                "Dragon Breath",
+                "Sand Tomb",
+                "Crunch",
+                "Screech"
+              ]
+            },
+            {
+              "pokemon_id": 372,
+              "name": "Shelgon",
+              "level": 104,
+              "moves": [
+                "Dragon Claw",
+                "Protect",
+                "Dragon Rage",
+                "Crunch"
+              ]
+            },
+            {
+              "pokemon_id": 147,
+              "name": "Dratini",
+              "level": 105,
+              "moves": [
+                "Dragon Rage",
+                "Twister",
+                "Thunder Wave",
+                "Extreme Speed"
+              ]
+            }
+          ]
+        },
+        "85": {
+          "floor_number": 85,
+          "shard_type": "dragon",
+          "is_boss": false,
+          "enemy_team": [
+            {
+              "pokemon_id": 372,
+              "name": "Shelgon",
+              "level": 104,
+              "moves": [
+                "Dragon Claw",
+                "Protect",
+                "Dragon Rage",
+                "Crunch"
+              ]
+            },
+            {
+              "pokemon_id": 147,
+              "name": "Dratini",
+              "level": 105,
+              "moves": [
+                "Dragon Rage",
+                "Twister",
+                "Thunder Wave",
+                "Extreme Speed"
+              ]
+            },
+            {
+              "pokemon_id": 148,
+              "name": "Dragonair",
+              "level": 106,
+              "moves": [
+                "Dragon Rush",
+                "Twister",
+                "Slam",
+                "Agility"
+              ]
+            }
+          ]
+        },
+        "86": {
+          "floor_number": 86,
+          "shard_type": "dragon",
+          "is_boss": false,
+          "enemy_team": [
+            {
+              "pokemon_id": 147,
+              "name": "Dratini",
+              "level": 105,
+              "moves": [
+                "Dragon Rage",
+                "Twister",
+                "Thunder Wave",
+                "Extreme Speed"
+              ]
+            },
+            {
+              "pokemon_id": 148,
+              "name": "Dragonair",
+              "level": 106,
+              "moves": [
+                "Dragon Rush",
+                "Twister",
+                "Slam",
+                "Agility"
+              ]
+            },
+            {
+              "pokemon_id": 230,
+              "name": "Kingdra",
+              "level": 107,
+              "moves": [
+                "Dragon Pulse",
+                "Hydro Pump",
+                "Smokescreen",
+                "Focus Energy"
+              ]
+            }
+          ]
+        },
+        "87": {
+          "floor_number": 87,
+          "shard_type": "dragon",
+          "is_boss": false,
+          "enemy_team": [
+            {
+              "pokemon_id": 148,
+              "name": "Dragonair",
+              "level": 106,
+              "moves": [
+                "Dragon Rush",
+                "Twister",
+                "Slam",
+                "Agility"
+              ]
+            },
+            {
+              "pokemon_id": 230,
+              "name": "Kingdra",
+              "level": 107,
+              "moves": [
+                "Dragon Pulse",
+                "Hydro Pump",
+                "Smokescreen",
+                "Focus Energy"
+              ]
+            },
+            {
+              "pokemon_id": 329,
+              "name": "Vibrava",
+              "level": 108,
+              "moves": [
+                "Dragon Breath",
+                "Earthquake",
+                "Crunch",
+                "Screech"
+              ]
+            }
+          ]
+        },
+        "88": {
+          "floor_number": 88,
+          "shard_type": "dragon",
+          "is_boss": false,
+          "enemy_team": [
+            {
+              "pokemon_id": 230,
+              "name": "Kingdra",
+              "level": 107,
+              "moves": [
+                "Dragon Pulse",
+                "Hydro Pump",
+                "Smokescreen",
+                "Focus Energy"
+              ]
+            },
+            {
+              "pokemon_id": 329,
+              "name": "Vibrava",
+              "level": 108,
+              "moves": [
+                "Dragon Breath",
+                "Earthquake",
+                "Crunch",
+                "Screech"
+              ]
+            },
+            {
+              "pokemon_id": 372,
+              "name": "Shelgon",
+              "level": 109,
+              "moves": [
+                "Dragon Claw",
+                "Protect",
+                "Dragon Rage",
+                "Zen Headbutt"
+              ]
+            }
+          ]
+        },
+        "89": {
+          "floor_number": 89,
+          "shard_type": "dragon",
+          "is_boss": false,
+          "enemy_team": [
+            {
+              "pokemon_id": 329,
+              "name": "Vibrava",
+              "level": 108,
+              "moves": [
+                "Dragon Breath",
+                "Earthquake",
+                "Crunch",
+                "Screech"
+              ]
+            },
+            {
+              "pokemon_id": 372,
+              "name": "Shelgon",
+              "level": 109,
+              "moves": [
+                "Dragon Claw",
+                "Protect",
+                "Dragon Rage",
+                "Zen Headbutt"
+              ]
+            },
+            {
+              "pokemon_id": 147,
+              "name": "Dratini",
+              "level": 110,
+              "moves": [
+                "Dragon Rage",
+                "Outrage",
+                "Thunder Wave",
+                "Extreme Speed"
+              ]
+            }
+          ]
+        },
+        "90": {
+          "floor_number": 90,
+          "shard_type": "dragon",
+          "is_boss": false,
+          "enemy_team": [
+            {
+              "pokemon_id": 372,
+              "name": "Shelgon",
+              "level": 109,
+              "moves": [
+                "Dragon Claw",
+                "Protect",
+                "Dragon Rage",
+                "Zen Headbutt"
+              ]
+            },
+            {
+              "pokemon_id": 147,
+              "name": "Dratini",
+              "level": 110,
+              "moves": [
+                "Dragon Rage",
+                "Outrage",
+                "Thunder Wave",
+                "Extreme Speed"
+              ]
+            },
+            {
+              "pokemon_id": 148,
+              "name": "Dragonair",
+              "level": 111,
+              "moves": [
+                "Dragon Rush",
+                "Hyper Beam",
+                "Slam",
+                "Agility"
+              ]
+            }
+          ]
+        },
+        "91": {
+          "floor_number": 91,
+          "shard_type": "dragon",
+          "is_boss": false,
+          "enemy_team": [
+            {
+              "pokemon_id": 147,
+              "name": "Dratini",
+              "level": 110,
+              "moves": [
+                "Dragon Rage",
+                "Outrage",
+                "Thunder Wave",
+                "Extreme Speed"
+              ]
+            },
+            {
+              "pokemon_id": 148,
+              "name": "Dragonair",
+              "level": 111,
+              "moves": [
+                "Dragon Rush",
+                "Hyper Beam",
+                "Slam",
+                "Agility"
+              ]
+            },
+            {
+              "pokemon_id": 230,
+              "name": "Kingdra",
+              "level": 112,
+              "moves": [
+                "Dragon Pulse",
+                "Hydro Pump",
+                "Ice Beam",
+                "Focus Energy"
+              ]
+            }
+          ]
+        },
+        "92": {
+          "floor_number": 92,
+          "shard_type": "dragon",
+          "is_boss": false,
+          "enemy_team": [
+            {
+              "pokemon_id": 148,
+              "name": "Dragonair",
+              "level": 111,
+              "moves": [
+                "Dragon Rush",
+                "Hyper Beam",
+                "Slam",
+                "Agility"
+              ]
+            },
+            {
+              "pokemon_id": 230,
+              "name": "Kingdra",
+              "level": 112,
+              "moves": [
+                "Dragon Pulse",
+                "Hydro Pump",
+                "Ice Beam",
+                "Focus Energy"
+              ]
+            },
+            {
+              "pokemon_id": 329,
+              "name": "Vibrava",
+              "level": 113,
+              "moves": [
+                "Dragon Breath",
+                "Earthquake",
+                "Fire Blast",
+                "Screech"
+              ]
+            }
+          ]
+        },
+        "93": {
+          "floor_number": 93,
+          "shard_type": "dragon",
+          "is_boss": false,
+          "enemy_team": [
+            {
+              "pokemon_id": 230,
+              "name": "Kingdra",
+              "level": 112,
+              "moves": [
+                "Dragon Pulse",
+                "Hydro Pump",
+                "Ice Beam",
+                "Focus Energy"
+              ]
+            },
+            {
+              "pokemon_id": 329,
+              "name": "Vibrava",
+              "level": 113,
+              "moves": [
+                "Dragon Breath",
+                "Earthquake",
+                "Fire Blast",
+                "Screech"
+              ]
+            },
+            {
+              "pokemon_id": 372,
+              "name": "Shelgon",
+              "level": 114,
+              "moves": [
+                "Dragon Claw",
+                "Protect",
+                "Dragon Pulse",
+                "Zen Headbutt"
+              ]
+            }
+          ]
+        },
+        "94": {
+          "floor_number": 94,
+          "shard_type": "dragon",
+          "is_boss": false,
+          "enemy_team": [
+            {
+              "pokemon_id": 329,
+              "name": "Vibrava",
+              "level": 113,
+              "moves": [
+                "Dragon Breath",
+                "Earthquake",
+                "Fire Blast",
+                "Screech"
+              ]
+            },
+            {
+              "pokemon_id": 372,
+              "name": "Shelgon",
+              "level": 114,
+              "moves": [
+                "Dragon Claw",
+                "Protect",
+                "Dragon Pulse",
+                "Zen Headbutt"
+              ]
+            },
+            {
+              "pokemon_id": 147,
+              "name": "Dratini",
+              "level": 115,
+              "moves": [
+                "Dragon Rage",
+                "Outrage",
+                "Thunder",
+                "Extreme Speed"
+              ]
+            }
+          ]
+        },
+        "95": {
+          "floor_number": 95,
+          "shard_type": "dragon",
+          "is_boss": false,
+          "enemy_team": [
+            {
+              "pokemon_id": 372,
+              "name": "Shelgon",
+              "level": 114,
+              "moves": [
+                "Dragon Claw",
+                "Protect",
+                "Dragon Pulse",
+                "Zen Headbutt"
+              ]
+            },
+            {
+              "pokemon_id": 147,
+              "name": "Dratini",
+              "level": 115,
+              "moves": [
+                "Dragon Rage",
+                "Outrage",
+                "Thunder",
+                "Extreme Speed"
+              ]
+            },
+            {
+              "pokemon_id": 148,
+              "name": "Dragonair",
+              "level": 116,
+              "moves": [
+                "Dragon Rush",
+                "Hyper Beam",
+                "Blizzard",
+                "Agility"
+              ]
+            }
+          ]
+        },
+        "96": {
+          "floor_number": 96,
+          "shard_type": "dragon",
+          "is_boss": false,
+          "enemy_team": [
+            {
+              "pokemon_id": 147,
+              "name": "Dratini",
+              "level": 115,
+              "moves": [
+                "Dragon Rage",
+                "Outrage",
+                "Thunder",
+                "Extreme Speed"
+              ]
+            },
+            {
+              "pokemon_id": 148,
+              "name": "Dragonair",
+              "level": 116,
+              "moves": [
+                "Dragon Rush",
+                "Hyper Beam",
+                "Blizzard",
+                "Agility"
+              ]
+            },
+            {
+              "pokemon_id": 230,
+              "name": "Kingdra",
+              "level": 117,
+              "moves": [
+                "Dragon Pulse",
+                "Hydro Pump",
+                "Ice Beam",
+                "Signal Beam"
+              ]
+            }
+          ]
+        },
+        "97": {
+          "floor_number": 97,
+          "shard_type": "dragon",
+          "is_boss": false,
+          "enemy_team": [
+            {
+              "pokemon_id": 148,
+              "name": "Dragonair",
+              "level": 116,
+              "moves": [
+                "Dragon Rush",
+                "Hyper Beam",
+                "Blizzard",
+                "Agility"
+              ]
+            },
+            {
+              "pokemon_id": 230,
+              "name": "Kingdra",
+              "level": 117,
+              "moves": [
+                "Dragon Pulse",
+                "Hydro Pump",
+                "Ice Beam",
+                "Signal Beam"
+              ]
+            },
+            {
+              "pokemon_id": 329,
+              "name": "Vibrava",
+              "level": 118,
+              "moves": [
+                "Dragon Breath",
+                "Earthquake",
+                "Fire Blast",
+                "Boomburst"
+              ]
+            }
+          ]
+        },
+        "98": {
+          "floor_number": 98,
+          "shard_type": "dragon",
+          "is_boss": false,
+          "enemy_team": [
+            {
+              "pokemon_id": 230,
+              "name": "Kingdra",
+              "level": 117,
+              "moves": [
+                "Dragon Pulse",
+                "Hydro Pump",
+                "Ice Beam",
+                "Signal Beam"
+              ]
+            },
+            {
+              "pokemon_id": 329,
+              "name": "Vibrava",
+              "level": 118,
+              "moves": [
+                "Dragon Breath",
+                "Earthquake",
+                "Fire Blast",
+                "Boomburst"
+              ]
+            },
+            {
+              "pokemon_id": 372,
+              "name": "Shelgon",
+              "level": 119,
+              "moves": [
+                "Dragon Claw",
+                "Protect",
+                "Dragon Pulse",
+                "Double-Edge"
+              ]
+            }
+          ]
+        },
+        "99": {
+          "floor_number": 99,
+          "shard_type": "dragon",
+          "is_boss": false,
+          "enemy_team": [
+            {
+              "pokemon_id": 329,
+              "name": "Vibrava",
+              "level": 118,
+              "moves": [
+                "Dragon Breath",
+                "Earthquake",
+                "Fire Blast",
+                "Boomburst"
+              ]
+            },
+            {
+              "pokemon_id": 372,
+              "name": "Shelgon",
+              "level": 119,
+              "moves": [
+                "Dragon Claw",
+                "Protect",
+                "Dragon Pulse",
+                "Double-Edge"
+              ]
+            },
+            {
+              "pokemon_id": 149,
+              "name": "Dragonite",
+              "level": 120,
+              "moves": [
+                "Dragon Rush",
+                "Hyper Beam",
+                "Hurricane",
+                "Extreme Speed"
+              ]
+            }
+          ]
+        },
+        "100": {
+          "floor_number": 100,
+          "shard_type": "dragon",
+          "is_boss": true,
+          "enemy_team": [
+            {
+              "pokemon_id": 1016,
+              "name": "Shadow Rayquaza",
+              "level": 100,
+              "moves": [
+                "Dragon Ascent",
+                "Extreme Speed",
+                "Earthquake",
+                "Crunch"
+              ]
+            },
+            {
+              "pokemon_id": 1016,
+              "name": "Shadow Rayquaza",
+              "level": 100,
+              "moves": [
+                "Outrage",
+                "Air Slash",
+                "Thunder",
+                "Fire Blast"
+              ]
+            },
+            {
+              "pokemon_id": 1016,
+              "name": "Shadow Rayquaza",
+              "level": 100,
+              "moves": [
+                "Dragon Pulse",
+                "Hurricane",
+                "Ice Beam",
+                "Ancient Power"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "boss_floors": [20, 40, 60, 80, 100],
+    "shard_zones": {
+      "1-20": "infernal",
+      "21-40": "frost", 
+      "41-60": "storm",
+      "61-80": "sea",
+      "81-100": "dragon"
+    },
+    "shadow_legendaries": {
+      "Shadow Articuno": {
+        "cost": {"frost": 100},
+        "pokemon_name": "Shadow Articuno"
+      },
+      "Shadow Moltres": {
+        "cost": {"infernal": 100},
+        "pokemon_name": "Shadow Moltres"
+      },
+      "Shadow Zapdos": {
+        "cost": {"storm": 100},
+        "pokemon_name": "Shadow Zapdos"
+      },
+      "Shadow Lugia": {
+        "cost": {"sea": 150},
+        "pokemon_name": "Shadow Lugia"
+      },
+      "Shadow Rayquaza": {
+        "cost": {"dragon": 150},
+        "pokemon_name": "Shadow Rayquaza"
+      }
+    },
+    "cooldown": {
+      "battle": 300,
+      "boss_battle": 600
+    },
+    "rewards": {
+      "regular_floor": {
+        "shards": 2,
+        "coins": 100
+      },
+      "boss_floor": {
+        "shards": 5,
+        "coins": 500
+      }
+    }
+  }
+}

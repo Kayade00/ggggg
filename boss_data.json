@@ -1,0 +1,318 @@
+{
+  "bosses": {
+    "gym_leader_brock": {
+      "name": "Gym Leader Brock",
+      "title": "The Rock-Solid Pokémon Trainer",
+      "difficulty": "easy",
+      "reward_credits": 500,
+      "team": [
+        {
+          "pokemon_id": 74,
+          "name": "Geodude",
+          "level": 100,
+          "nature": "Hardy",
+          "ability": "Rock Head",
+          "stats": {
+            "hp": 209,
+            "attack": 209,
+            "defense": 219,
+            "sp_attack": 144,
+            "sp_defense": 144,
+            "speed": 104
+          },
+          "moves": [
+            {"name": "Rock Throw", "type": "Rock", "power": 50, "accuracy": 90, "pp": 15},
+            {"name": "Tackle", "type": "Normal", "power": 40, "accuracy": 100, "pp": 35},
+            {"name": "Scratch", "type": "Normal", "power": 40, "accuracy": 100, "pp": 35},
+            {"name": "Earthquake", "type": "Ground", "power": 100, "accuracy": 100, "pp": 10}
+          ]
+        },
+        {
+          "pokemon_id": 95,
+          "name": "Onix",
+          "level": 50,
+          "nature": "Impish",
+          "ability": "Rock Head",
+          "stats": {
+            "hp": 204,
+            "attack": 144,
+            "defense": 294,
+            "sp_attack": 144,
+            "sp_defense": 164,
+            "speed": 199
+          },
+          "moves": [
+            {"name": "Rock Tomb", "type": "Rock", "power": 60, "accuracy": 95, "pp": 15},
+            {"name": "Earthquake", "type": "Ground", "power": 100, "accuracy": 100, "pp": 10},
+            {"name": "Rock Slide", "type": "Rock", "power": 75, "accuracy": 90, "pp": 10},
+            {"name": "Stone Edge", "type": "Rock", "power": 100, "accuracy": 80, "pp": 5}
+          ]
+        },
+        {
+          "pokemon_id": 76,
+          "name": "Golem",
+          "level": 50,
+          "nature": "Adamant",
+          "ability": "Sturdy",
+          "stats": {
+            "hp": 209,
+            "attack": 209,
+            "defense": 219,
+            "sp_attack": 144,
+            "sp_defense": 144,
+            "speed": 104
+          },
+          "moves": [
+            {"name": "Rock Blast", "type": "Rock", "power": 25, "accuracy": 100, "pp": 10},
+            {"name": "Earthquake", "type": "Ground", "power": 100, "accuracy": 100, "pp": 10},
+            {"name": "Bulldoze", "type": "Ground", "power": 60, "accuracy": 100, "pp": 20},
+            {"name": "Stone Edge", "type": "Rock", "power": 120, "accuracy": 100, "pp": 20}
+          ]
+        }
+      ]
+    },
+    "gym_leader_misty": {
+      "name": "Gym Leader Misty",
+      "title": "The Tomboyish Mermaid",
+      "difficulty": "easy",
+      "reward_credits": 2500,
+      "team": [
+        {
+          "pokemon_id": 54,
+          "name": "Psyduck",
+          "level": 100,
+          "nature": "Modest",
+          "ability": "Damp",
+          "stats": {
+            "hp": 289,
+            "attack": 199,
+            "defense": 189,
+            "sp_attack": 229,
+            "sp_defense": 199,
+            "speed": 199
+          },
+          "moves": [
+            {"name": "Hydro Pump", "type": "Water", "power": 110, "accuracy": 80, "pp": 5},
+            {"name": "Psychic", "type": "Psychic", "power": 90, "accuracy": 100, "pp": 10},
+            {"name": "Disable", "type": "Normal", "power": 0, "accuracy": 100, "pp": 20},
+            {"name": "Ice Beam", "type": "Ice", "power": 90, "accuracy": 100, "pp": 10}
+          ]
+        },
+        {
+          "pokemon_id": 120,
+          "name": "Staryu",
+          "level": 100,
+          "nature": "Timid",
+          "ability": "Natural Cure",
+          "stats": {
+            "hp": 259,
+            "attack": 174,
+            "defense": 199,
+            "sp_attack": 239,
+            "sp_defense": 199,
+            "speed": 284
+          },
+          "moves": [
+            {"name": "Surf", "type": "Water", "power": 90, "accuracy": 100, "pp": 15},
+            {"name": "Rapid Spin", "type": "Normal", "power": 20, "accuracy": 100, "pp": 40},
+            {"name": "Thunderbolt", "type": "Electric", "power": 90, "accuracy": 100, "pp": 15},
+            {"name": "Recover", "type": "Normal", "power": 0, "accuracy": 100, "pp": 5}
+          ]
+        },
+        {
+          "pokemon_id": 121,
+          "name": "Starmie",
+          "level": 100,
+          "nature": "Modest",
+          "ability": "Natural Cure",
+          "stats": {
+            "hp": 289,
+            "attack": 244,
+            "defense": 284,
+            "sp_attack": 339,
+            "sp_defense": 284,
+            "speed": 349
+          },
+          "moves": [
+            {"name": "Hydro Pump", "type": "Water", "power": 110, "accuracy": 80, "pp": 5},
+            {"name": "Psychic", "type": "Psychic", "power": 90, "accuracy": 100, "pp": 10},
+            {"name": "Ice Beam", "type": "Ice", "power": 90, "accuracy": 100, "pp": 10},
+            {"name": "Thunderbolt", "type": "Electric", "power": 90, "accuracy": 100, "pp": 15}
+          ]
+        }
+      ]
+    },
+    "gym_leader_surge": {
+      "name": "Gym Leader Surge",
+      "title": "The Lightning American",
+      "difficulty": "easy",
+      "reward_credits": 3000,
+      "team": [
+        {
+          "pokemon_id": 26,
+          "name": "Raichu",
+          "level": 100,
+          "nature": "Jolly",
+          "ability": "Static",
+          "stats": {
+            "hp": 289,
+            "attack": 279,
+            "defense": 199,
+            "sp_attack": 279,
+            "sp_defense": 279,
+            "speed": 349
+          },
+          "moves": [
+            {"name": "Thunderbolt", "type": "Electric", "power": 90, "accuracy": 100, "pp": 15},
+            {"name": "Thunder", "type": "Electric", "power": 110, "accuracy": 70, "pp": 10},
+            {"name": "Close Combat", "type": "Fighting", "power": 120, "accuracy": 100, "pp": 10},
+            {"name": "Hyper Beam", "type": "Normal", "power": 150, "accuracy": 90, "pp": 10}
+          ]
+        },
+        {
+          "pokemon_id": 125,
+          "name": "Electabuzz",
+          "level": 100,
+          "nature": "Modest",
+          "ability": "Static",
+          "stats": {
+            "hp": 309,
+            "attack": 268,
+            "defense": 219,
+            "sp_attack": 349,
+            "sp_defense": 284,
+            "speed": 349
+          },
+          "moves": [
+            {"name": "Thunder Punch", "type": "Electric", "power": 75, "accuracy": 100, "pp": 15},
+            {"name": "Psychic", "type": "Psychic", "power": 90, "accuracy": 100, "pp": 10},
+            {"name": "Thunder", "type": "Electric", "power": 110, "accuracy": 70, "pp": 10},
+            {"name": "Water Spout", "type": "Water", "power": 150, "accuracy": 100, "pp": 5}
+          ]
+        },
+        {
+          "pokemon_id": 82,
+          "name": "Magneton",
+          "level": 100,
+          "nature": "Modest",
+          "ability": "Magnet Pull",
+          "stats": {
+            "hp": 300,
+            "attack": 199,
+            "defense": 300,
+            "sp_attack": 400,
+            "sp_defense": 300,
+            "speed": 300
+          },
+          "moves": [
+            {"name": "Future Sight", "type": "Psychic", "power": 120, "accuracy": 100, "pp": 10},
+            {"name": "Dark Pulse", "type": "Dark", "power": 80, "accuracy": 100, "pp": 15},
+            {"name": "Make It Rain", "type": "Steel", "power": 130, "accuracy": 100, "pp": 5},
+            {"name": "Zap Cannon", "type": "Electric", "power": 120, "accuracy": 50, "pp": 5}
+          ]
+        }
+      ]
+    },
+    "gym_leader_blaine": {
+      "name": "Gym Leader Blaine",
+      "title": "The Hot-Headed Quiz Master",
+      "difficulty": "medium",
+      "reward_credits": 4000,
+      "team": [
+        {
+          "pokemon_id": 58,
+          "name": "Growlithe",
+          "level": 100,
+          "nature": "Adamant",
+          "ability": "Flash Fire",
+          "stats": {
+            "hp": 300,
+            "attack": 300,
+            "defense": 300,
+            "sp_attack": 300,
+            "sp_defense": 300,
+            "speed": 300
+          },
+          "moves": [
+            {"name": "Flare Blitz", "type": "Fire", "power": 120, "accuracy": 100, "pp": 15},
+            {"name": "Close Combat", "type": "Fighting", "power": 120, "accuracy": 100, "pp": 10},
+            {"name": "Wild Charge", "type": "Electric", "power": 90, "accuracy": 100, "pp": 15},
+            {"name": "Draco Meteor", "type": "Dragon", "power": 130, "accuracy": 100, "pp": 5}
+          ]
+        },
+        {
+          "pokemon_id": 77,
+          "name": "Ponyta",
+          "level": 100,
+          "nature": "Jolly",
+          "ability": "Flash Fire",
+          "stats": {
+            "hp": 309,
+            "attack": 300,
+            "defense": 199,
+            "sp_attack": 300,
+            "sp_defense": 300,
+            "speed": 400
+          },
+          "moves": [
+            {"name": "Eruption", "type": "Fire", "power": 150, "accuracy": 100, "pp": 5},
+            {"name": "Earthquake", "type": "Ground", "power": 100, "accuracy": 100, "pp": 10},
+            {"name": "Fire Blast", "type": "Fire", "power": 110, "accuracy": 85, "pp": 5},
+            {"name": "Giga Impact", "type": "Normal", "power": 150, "accuracy": 90, "pp": 5}
+          ]
+        },
+        {
+          "pokemon_id": 59,
+          "name": "Arcanine",
+          "level": 100,
+          "nature": "Modest",
+          "ability": "Flash Fire",
+          "stats": {
+            "hp": 400,
+            "attack": 279,
+            "defense": 219,
+            "sp_attack": 349,
+            "sp_defense": 219,
+            "speed": 400
+          },
+          "moves": [
+            {"name": "Fire Blast", "type": "Fire", "power": 110, "accuracy": 85, "pp": 5},
+            {"name": "Solar Beam", "type": "Grass", "power": 120, "accuracy": 100, "pp": 10},
+            {"name": "Extreme Speed", "type": "Normal", "power": 80, "accuracy": 100, "pp": 5},
+            {"name": "Dragon Pulse", "type": "Dragon", "power": 85, "accuracy": 100, "pp": 10}
+          ]
+        }
+      ]
+    }
+  },
+  "difficulties": {
+    "easy": {
+      "level_range": [10, 25],
+      "reward_multiplier": 1.0,
+      "ai_intelligence": "basic"
+    },
+    "medium": {
+      "level_range": [20, 35],
+      "reward_multiplier": 1.5,
+      "ai_intelligence": "intermediate"
+    },
+    "hard": {
+      "level_range": [45, 60],
+      "reward_multiplier": 2.0,
+      "ai_intelligence": "advanced"
+    },
+    "legendary": {
+      "level_range": [70, 100],
+      "reward_multiplier": 3.0,
+      "ai_intelligence": "expert"
+    }
+  },
+  "battle_settings": {
+    "team_size": 3,
+    "max_turns": 100,
+    "switch_penalty": false,
+    "items_allowed": true,
+    "healing_items": ["Potion", "Super Potion", "Hyper Potion", "Full Restore"],
+    "status_items": ["Antidote", "Paralyze Heal", "Awakening", "Burn Heal", "Ice Heal"]
+  }
+} 
