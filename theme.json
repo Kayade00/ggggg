@@ -1,0 +1,222 @@
+{
+  "name": "Pokémon Bot Dark Theme",
+  "version": "1.0.0",
+  "description": "A sophisticated dark theme for the Pokémon Discord bot",
+  
+  "colors": {
+    "primary": "0x2b2d31",
+    "secondary": "0x36393f",
+    "accent": "0x5865f2",
+    "success": "0x57f287",
+    "warning": "0xfee75c",
+    "error": "0xed4245",
+    "info": "0x3498db",
+    "shop": "0x2b2d31",
+    "quest": "0x2b2d31",
+    "battle": "0xff6b6b",
+    "pokemon": "0x4f545c",
+    "trade": "0x9b59b6",
+    "rare": "0xf1c40f",
+    "legendary": "0xe74c3c",
+    "shiny": "0xf39c12"
+  },
+  
+  "emojis": {
+    "currency": {
+      "coins": "<:bcoin:1390020085439008809>",
+      "diamonds": "<:bdiamond:1390020108512002138>",
+      "credits": "💰"
+    },
+    "pokemon": {
+      "pokeball": "⚪",
+      "greatball": "🔵",
+      "ultraball": "⚫",
+      "masterball": "🟣",
+      "shiny": "<:bshiny:1390022958600290375>",
+      "favorite": "<:bheart:1390022897346809856>",
+      "level": "<:blevel:1390022929487761470>",
+      "exp": "<:bexp:1390023017991635034>",
+      "nature": "🧬",
+      "friendship": "<:bfriendship:1390022986614177803>"
+    },
+    "ui": {
+      "arrow_left": "◀",
+      "arrow_right": "▶",
+      "check": "✅",
+      "cross": "❌",
+      "warning": "⚠️",
+      "info": "ℹ️",
+      "loading": "⏳",
+      "search": "🔍",
+      "settings": "⚙️",
+      "back": "🔙",
+      "home": "🏠"
+    },
+    "progress": {
+      "filled": "▰",
+      "empty": "▱",
+      "separator": "│"
+    },
+    "shop": {
+      "category": "📦",
+      "purchase": "🛒",
+      "sold": "✅",
+      "out_of_stock": "📋",
+      "rare_candy": "🍬",
+      "mint": "🌿",
+      "grepa_berry": "🍇",
+      "hondew_berry": "🍈", 
+      "kelpsy_berry": "🫐",
+      "pomeg_berry": "🍓",
+      "qualot_berry": "🍒",
+      "tamato_berry": "🍅",
+      "exp_items": "🎯",
+      "nature_mints": "🌿",
+      "friendship_berries": "🍇",
+      "diamond_items": "💎"
+    },
+    "quest": {
+      "daily": "📋",
+      "completed": "✅",
+      "incomplete": "⏸️",
+      "reward": "🎁",
+      "timer": "⏰"
+    },
+    "battle": {
+      "sword": "⚔️",
+      "shield": "🛡️",
+      "victory": "🏆",
+      "defeat": "💀",
+      "flee": "🏃",
+      "boss": "👑"
+    },
+    "stats": {
+      "hp": "❤️",
+      "attack": "⚔️",
+      "defense": "🛡️",
+      "speed": "💨",
+      "sp_attack": "🔥",
+      "sp_defense": "💙"
+    },
+    "types": {
+      "normal": "⚪",
+      "fire": "🔥",
+      "water": "💧",
+      "electric": "⚡",
+      "grass": "🌿",
+      "ice": "❄️",
+      "fighting": "👊",
+      "poison": "☠️",
+      "ground": "🌍",
+      "flying": "🕊️",
+      "psychic": "🔮",
+      "bug": "🐛",
+      "rock": "🪨",
+      "ghost": "👻",
+      "dragon": "🐉",
+      "dark": "🌑",
+      "steel": "⚙️",
+      "fairy": "🧚"
+    }
+  },
+  
+  "formatting": {
+    "progress_bar": {
+      "length": 5,
+      "filled_char": "▰",
+      "empty_char": "▱",
+      "bracket_start": "",
+      "bracket_end": ""
+    },
+    "separators": {
+      "line": "─────────────────────",
+      "dot": "•",
+      "arrow": "➜",
+      "bullet": "•",
+      "sub_item": "└",
+      "tree_branch": "├",
+      "tree_end": "└"
+    },
+    "text_styles": {
+      "bold": "**{text}**",
+      "italic": "*{text}*",
+      "code": "`{text}`",
+      "code_block": "```{language}\n{text}\n```",
+      "spoiler": "||{text}||",
+      "underline": "__{text}__",
+      "strikethrough": "~~{text}~~"
+    },
+    "lists": {
+      "numbered": "{number}. {text}",
+      "bulleted": "• {text}",
+      "sub_item": "  └ {text}",
+      "tree_item": "  ├ {text}",
+      "tree_last": "  └ {text}"
+    }
+  },
+  
+  "layouts": {
+    "embed_structure": {
+      "title_max_length": 256,
+      "description_max_length": 4096,
+      "field_max_length": 1024,
+      "footer_max_length": 2048,
+      "max_fields": 25
+    },
+    "pagination": {
+      "items_per_page": 10,
+      "max_pages": 25
+    }
+  },
+  
+  "messages": {
+    "loading": {
+      "generic": "Loading...",
+      "pokemon": "Searching for Pokémon...",
+      "battle": "Preparing battle...",
+      "shop": "Loading shop..."
+    },
+    "errors": {
+      "generic": "Something went wrong!",
+      "not_found": "Item not found!",
+      "insufficient_funds": "Insufficient funds!",
+      "no_permission": "You don't have permission!",
+      "cooldown": "Please wait before using this again!"
+    },
+    "success": {
+      "generic": "Success!",
+      "purchase": "Purchase successful!",
+      "level_up": "Level up!",
+      "evolution": "Evolution complete!"
+    }
+  },
+  
+  "animations": {
+    "loading_frames": ["⣾", "⣽", "⣻", "⢿", "⡿", "⣟", "⣯", "⣷"],
+    "progress_frames": ["▰▱▱▱▱", "▰▰▱▱▱", "▰▰▰▱▱", "▰▰▰▰▱", "▰▰▰▰▰"]
+  },
+  
+  "templates": {
+    "quest_progress": "{emoji} **{name}**\n{progress_bar} {current}/{total}\nReward: {reward}\n",
+    "shop_item": "{emoji} **{name}** - {currency} {price:,}\n└ {description}\n",
+    "pokemon_summary": "{shiny}{emoji} **{name}** (#{number}) - Level {level}",
+    "balance_display": "{coins_emoji} **{coins:,}** coins | {diamonds_emoji} **{diamonds:,}** diamonds",
+    "category_list": "• **{name}** - {count} items {status}",
+    "progress_completion": "**{title} {current}/{total}** ➜ {reward_emoji} **{reward}**"
+  },
+  
+  "timeouts": {
+    "embed_view": 300,
+    "confirmation": 60,
+    "battle": 600,
+    "shop_interaction": 300
+  },
+  
+  "special_effects": {
+    "shiny_indicator": "✨",
+    "legendary_indicator": "👑",
+    "rare_indicator": "💫",
+    "event_indicator": "🎪",
+    "premium_indicator": "💎"
+  }
+} 
